@@ -229,35 +229,27 @@
         }
 
         /* Input Box Styling */
-        .input-answer {
-            width: 95px;
-            padding: 6px 8px;
-            font-size: 16px;
-            font-weight: bold;
-            border: 2px solid #cbd5e1;
-            border-radius: 6px;
-            text-align: center;
-            outline: none;
-            transition: all 0.2s ease;
-            font-family: inherit;
-        }
+   /* Input Box Styling（ライトブルー仕様） */
+.input-answer {
+    width: 100px;
+    padding: 6px 8px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #f0f9ff; /* 爽やかな薄い水色背景 */
+    border: 2px solid #38bdf8; /* くっきり見える明るいブルー枠 */
+    border-radius: 6px;
+    color: #0369a1;            /* 入力文字も読みやすい濃いブルー */
+    text-align: center;
+    outline: none;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
 
-        .input-answer:focus {
-            border-color: #0284c7;
-            box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
-        }
-
-        .input-answer.correct {
-            border-color: var(--correct-green);
-            background-color: #f0fdf4;
-            color: #15803d;
-        }
-
-        .input-answer.wrong {
-            border-color: var(--wrong-red);
-            background-color: #fef2f2;
-            color: #b91c1c;
-        }
+.input-answer:focus {
+    border-color: #0284c7;
+    background-color: #ffffff; /* カーソルを合わせた時は白地にして入力しやすく */
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.2);
+}
 
         /* Feedback Status */
         .status-badge {
