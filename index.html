@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>【志学ゼミナール】公立高校受験 英熟語＋連語表現300 完全版 (UNIT 1〜20)</title>
+    <style>
+        :root {
+            --primary-color: #059669;
+            --primary-hover: #047857;
+            --bg-color: #f0fdf4;
+            --card-bg: #ffffff;
+            --text-color: #1f2937;
+            --border-color: #e5e7eb;
+            --accent-yellow: #fef3c7;
+            --badge-blue: #e0f2fe;
+            --badge-blue-text: #0369a1;
+            --prep-color: #0284c7;
+            --correct-green: #22c55e;
+            --wrong-red: #ef4444;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f4f6f8;
+            color: var(--text-color);
+            line-height: 1.5;
+            padding: 10px;
+        }
+
+        .container {
+            max-width: 1020px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        /* Header Banner */
+        .system-header {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 14px 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .system-title {
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .school-name {
+            font-size: 12px;
+            background: rgba(255, 255, 255, 0.22);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+
+        /* Top Navigation Tabs */
+        .nav-tabs {
+            display: flex;
+            background: #f8fafc;
+            border-bottom: 2px solid #e2e8f0;
+            padding: 10px 12px 0 12px;
+            gap: 6px;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .tab-btn {
+            padding: 8px 14px;
+            border: 1px solid #cbd5e1;
+            border-bottom: none;
+            border-radius: 8px 8px 0 0;
+            background: #f1f5f9;
+            cursor: pointer;
+            font-size: 13px;
+            color: #64748b;
+            white-space: nowrap;
+            transition: all 0.2s ease;
+        }
+
+        .tab-btn.active {
+            background: white;
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            font-weight: bold;
+            border-top: 3px solid var(--primary-color);
+        }
+
+        /* Control Panel */
+        .control-panel {
+            padding: 14px 18px;
+            background: #f8fafc;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* ユニット切替ボタンの横幅完全統一デザイン */
+        .unit-selector {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+            max-width: 740px;
+        }
+
+        .btn-unit {
+            width: 68px;
+            text-align: center;
+            padding: 6px 0;
+            border-radius: 6px;
+            border: 1px solid #cbd5e1;
+            background: white;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            color: #334155;
+            transition: all 0.15s ease;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+
+        .btn-unit:hover {
+            background: #f1f5f9;
+            border-color: #94a3b8;
+        }
+
+        .btn-unit.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .btn-action {
+            padding: 7px 14px;
+            border-radius: 6px;
+            border: 1px solid #cbd5e1;
+            background: white;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            color: #334155;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+
+        .btn-grade-all {
+            background: #0284c7;
+            color: white;
+            border-color: #0284c7;
+        }
+
+        .btn-grade-all:hover {
+            background: #0369a1;
+        }
+
+        /* Score Tracker */
+        .score-box {
+            font-size: 14px;
+            font-weight: bold;
+            color: var(--primary-color);
+            background: #e6f4ea;
+            padding: 6px 16px;
+            border-radius: 20px;
+            border: 1px solid #a7f3d0;
+        }
+
+        /* Content Area */
+        .content-area {
+            padding: 16px;
+        }
+
+        .unit-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #059669;
+        }
+
+        .unit-title {
+            font-size: 16px;
+            color: #065f46;
+            font-weight: bold;
+        }
+
+        /* Problem Table */
+        .idiom-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        .idiom-table th {
+            background: #f1f5f9;
+            color: #475569;
+            padding: 10px 8px;
+            text-align: left;
+            border-bottom: 2px solid #cbd5e1;
+            font-size: 13px;
+        }
+
+        .idiom-table td {
+            padding: 12px 8px;
+            border-bottom: 1px solid #f1f5f9;
+            vertical-align: middle;
+        }
+
+        .idiom-table tr:hover {
+            background-color: #fafafa;
+        }
+
+        /* Input Box Styling */
+        .input-answer {
+            width: 95px;
+            padding: 6px 8px;
+            font-size: 16px;
+            font-weight: bold;
+            border: 2px solid #cbd5e1;
+            border-radius: 6px;
+            text-align: center;
+            outline: none;
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+
+        .input-answer:focus {
+            border-color: #0284c7;
+            box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+        }
+
+        .input-answer.correct {
+            border-color: var(--correct-green);
+            background-color: #f0fdf4;
+            color: #15803d;
+        }
+
+        .input-answer.wrong {
+            border-color: var(--wrong-red);
+            background-color: #fef2f2;
+            color: #b91c1c;
+        }
+
+        /* Feedback Status */
+        .status-badge {
+            font-size: 16px;
+            font-weight: bold;
+            display: inline-block;
+            margin-left: 4px;
+        }
+
+        .status-badge.ok { color: var(--correct-green); }
+        .status-badge.ng { color: var(--wrong-red); }
+
+        .correct-answer-text {
+            font-size: 12px;
+            color: #dc2626;
+            font-weight: bold;
+            margin-top: 3px;
+            display: block;
+        }
+
+        /* Blank Box in Examples */
+        .ex-blank {
+            background: #fef3c7;
+            color: #d97706;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            border: 1px dashed #f59e0b;
+        }
+
+        .ex-revealed {
+            background: #dcfce7;
+            color: #15803d;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            border: 1px solid #22c55e;
+        }
+
+        /* Audio & Badges */
+        .audio-btn {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: var(--primary-color);
+            padding: 4px;
+        }
+
+        .badge-note {
+            font-size: 11px;
+            padding: 2px 7px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-left: 6px;
+            font-weight: 600;
+        }
+
+        .badge-grammar { background: #f3e8ff; color: #7e22ce; }
+        .badge-synonym { background: #e0f2fe; color: #0369a1; }
+        .badge-caution { background: #fef3c7; color: #b45309; }
+
+        .jp-text {
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 4px;
+            transition: all 0.15s;
+            display: inline-block;
+        }
+
+        .jp-text.hidden {
+            background: #cbd5e1;
+            color: transparent;
+            user-select: none;
+        }
+
+        .jp-text.hidden::after {
+            content: "タップで表示";
+            color: #64748b;
+            font-size: 11px;
+            font-weight: normal;
+        }
+
+        .btn-single-check {
+            padding: 6px 12px;
+            font-size: 13px;
+            border-radius: 6px;
+            border: 1px solid #94a3b8;
+            background: #f8fafc;
+            cursor: pointer;
+            font-weight: bold;
+            color: #334155;
+        }
+
+        /* スマホ表示用レスポンシブCSS */
+        @media (max-width: 768px) {
+            body { padding: 5px; }
+            .system-title { font-size: 15px; }
+            .school-name { font-size: 11px; }
+
+            .idiom-table thead { display: none; }
+            
+            .idiom-table, .idiom-table tbody, .idiom-table tr, .idiom-table td {
+                display: block;
+                width: 100%;
+            }
+
+            .idiom-table tr {
+                background: #ffffff;
+                border: 1px solid #cbd5e1;
+                border-radius: 8px;
+                margin-bottom: 12px;
+                padding: 12px;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            }
+
+            .idiom-table td {
+                padding: 4px 0;
+                border-bottom: none;
+            }
+
+            .problem-row-mobile {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                flex-wrap: wrap;
+                margin-bottom: 6px;
+            }
+
+            .input-answer {
+                width: 110px;
+                font-size: 16px;
+            }
+
+            .unit-selector {
+                max-width: 100%;
+                justify-content: flex-start;
+            }
+
+            .btn-unit {
+                width: 60px;
+                font-size: 11px;
+            }
+        }
+
+        /* Footer Note */
+        .footer-note {
+            text-align: center;
+            padding: 15px;
+            font-size: 12px;
+            color: #64748b;
+            background: #f8fafc;
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header -->
+    <div class="system-header">
+        <div class="system-title">
+            <span>📚 中学英単語＆文法・熟語演習システム【全300語】</span>
+        </div>
+        <span class="school-name">志学ゼミナール</span>
+    </div>
+
+    <!-- Navigation Tabs (GitHub Pagesの各リポジトリURLへ連動) -->
+    <div class="nav-tabs">
+        <button class="tab-btn" onclick="location.href='https://shigakusakura-pixel.github.io/mystudyroom/'">マイスタディ</button>
+        <button class="tab-btn" onclick="location.href='https://shigakusakura-pixel.github.io/tango/'">中学英単語</button>
+        <button class="tab-btn" onclick="location.href='https://shigakusakura-pixel.github.io/grammar/'">中学英文法</button>
+        <button class="tab-btn active">★ 入試英熟語300 (UNIT 1〜20)</button>
+    </div>
+
+    <!-- Control Panel -->
+    <div class="control-panel">
+        <div class="unit-selector">
+            <button class="btn-unit active" id="btn-u1" onclick="switchUnit(1)">UNIT 1</button>
+            <button class="btn-unit" id="btn-u2" onclick="switchUnit(2)">UNIT 2</button>
+            <button class="btn-unit" id="btn-u3" onclick="switchUnit(3)">UNIT 3</button>
+            <button class="btn-unit" id="btn-u4" onclick="switchUnit(4)">UNIT 4</button>
+            <button class="btn-unit" id="btn-u5" onclick="switchUnit(5)">UNIT 5</button>
+            <button class="btn-unit" id="btn-u6" onclick="switchUnit(6)">UNIT 6</button>
+            <button class="btn-unit" id="btn-u7" onclick="switchUnit(7)">UNIT 7</button>
+            <button class="btn-unit" id="btn-u8" onclick="switchUnit(8)">UNIT 8</button>
+            <button class="btn-unit" id="btn-u9" onclick="switchUnit(9)">UNIT 9</button>
+            <button class="btn-unit" id="btn-u10" onclick="switchUnit(10)">UNIT 10</button>
+            <button class="btn-unit" id="btn-u11" onclick="switchUnit(11)">UNIT 11</button>
+            <button class="btn-unit" id="btn-u12" onclick="switchUnit(12)">UNIT 12</button>
+            <button class="btn-unit" id="btn-u13" onclick="switchUnit(13)">UNIT 13</button>
+            <button class="btn-unit" id="btn-u14" onclick="switchUnit(14)">UNIT 14</button>
+            <button class="btn-unit" id="btn-u15" onclick="switchUnit(15)">UNIT 15</button>
+            <button class="btn-unit" id="btn-u16" onclick="switchUnit(16)">UNIT 16</button>
+            <button class="btn-unit" id="btn-u17" onclick="switchUnit(17)">UNIT 17</button>
+            <button class="btn-unit" id="btn-u18" onclick="switchUnit(18)">UNIT 18</button>
+            <button class="btn-unit" id="btn-u19" onclick="switchUnit(19)">UNIT 19</button>
+            <button class="btn-unit" id="btn-u20" onclick="switchUnit(20)">UNIT 20</button>
+        </div>
+
+        <div style="display:flex; gap:10px; align-items:center; margin-top:6px;">
+            <button class="btn-action btn-grade-all" onclick="gradeAllAnswers()">📝 一括採点する</button>
+            <button class="btn-action" onclick="toggleAllJapanese()">日本語訳：一括切替</button>
+            <div class="score-box" id="score-display">スコア: 0 / 15</div>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="content-area">
+        <div class="unit-header">
+            <span class="unit-title" id="unit-title">UNIT 1 : be動詞・助動詞を使う重要熟語</span>
+            <button class="btn-action" style="font-size:12px; padding:4px 8px;" onclick="resetAllInputs()">入力をクリア</button>
+        </div>
+
+        <table class="idiom-table">
+            <thead>
+                <tr>
+                    <th style="width: 35px;">#</th>
+                    <th style="width: 40px;">音声</th>
+                    <th>キーボード入力問題（前置詞・重要部分を解答）</th>
+                    <th>日本語訳</th>
+                    <th>公立高校入試 頻出例文・ポイント</th>
+                    <th style="width: 90px;">判定</th>
+                </tr>
+            </thead>
+            <tbody id="idiom-tbody">
+                <!-- Data dynamically inserted via JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="footer-note">
+        公立高校受験「英熟語＋連語表現300」自動採点演習モジュール | 志学ゼミナール
+    </div>
+</div>
+
+<script>
+    // UNIT 1〜20 (1〜300) 全300語データ
+    const idiomData = [
+        {"id": 1, "unit": 1, "phrase": "be able to ~", "prep": "to", "prefix": "be able", "suffix": "~", "jp": "〜することができる", "ex_en_pre": "She is able", "ex_en_post": "swim very fast.", "ex_jp": "彼女はとても速く泳ぐことができる。", "note": "can と同義", "badgeType": "badge-synonym", "speech_text": "be able to"},
+        {"id": 2, "unit": 1, "phrase": "be afraid of ~", "prep": "of", "prefix": "be afraid", "suffix": "~", "jp": "〜をこわがる", "ex_en_pre": "He is afraid", "ex_en_post": "the dog.", "ex_jp": "彼はその犬をこわがっている。", "note": "感情を表すbe動詞", "badgeType": "badge-grammar", "speech_text": "be afraid of"},
+        {"id": 3, "unit": 1, "phrase": "be different from ~", "prep": "from", "prefix": "be different", "suffix": "~", "jp": "〜と違う", "ex_en_pre": "My answer is different", "ex_en_post": "yours.", "ex_jp": "私の答はあなたのと違う。", "note": "重要対比表現", "badgeType": "badge-caution", "speech_text": "be different from"},
+        {"id": 4, "unit": 1, "phrase": "be famous for ~", "prep": "for", "prefix": "be famous", "suffix": "~", "jp": "〜で有名である", "ex_en_pre": "Shizuoka is famous", "ex_en_post": "its tea.", "ex_jp": "静岡はお茶で有名です。", "note": "理由・原因のfor", "badgeType": "badge-grammar", "speech_text": "be famous for"},
+        {"id": 5, "unit": 1, "phrase": "be full of ~", "prep": "of", "prefix": "be full", "suffix": "~", "jp": "〜でいっぱいである", "ex_en_pre": "Her eyes were full", "ex_en_post": "tears.", "ex_jp": "彼女の目は涙でいっぱいだった。", "note": "filled with と同義", "badgeType": "badge-synonym", "speech_text": "be full of"},
+        {"id": 6, "unit": 1, "phrase": "be going to ~", "prep": "to", "prefix": "be going", "suffix": "~", "jp": "〜するつもりである", "ex_en_pre": "I am going", "ex_en_post": "be a teacher.", "ex_jp": "私は先生になるつもりです。", "note": "未来を表す表現", "badgeType": "badge-grammar", "speech_text": "be going to"},
+        {"id": 7, "unit": 1, "phrase": "be glad to ~", "prep": "to", "prefix": "be glad", "suffix": "~", "jp": "〜してうれしい", "ex_en_pre": "I'm glad", "ex_en_post": "meet you.", "ex_jp": "お会いできてうれしいです。", "note": "感情の原因の不定詞", "badgeType": "badge-grammar", "speech_text": "be glad to"},
+        {"id": 8, "unit": 1, "phrase": "be good at ~", "prep": "at", "prefix": "be good", "suffix": "~", "jp": "〜が上手である", "ex_en_pre": "She is good", "ex_en_post": "playing the piano.", "ex_jp": "彼女はピアノを弾くのが上手だ。", "note": "at ＋ 動名詞(-ing)", "badgeType": "badge-caution", "speech_text": "be good at"},
+        {"id": 9, "unit": 1, "phrase": "be interested in ~", "prep": "in", "prefix": "be interested", "suffix": "~", "jp": "〜に興味がある", "ex_en_pre": "I'm interested", "ex_en_post": "music.", "ex_jp": "私は音楽に興味があります。", "note": "超頻出！受動態", "badgeType": "badge-grammar", "speech_text": "be interested in"},
+        {"id": 10, "unit": 1, "phrase": "be kind to ~", "prep": "to", "prefix": "be kind", "suffix": "~", "jp": "〜に親切である", "ex_en_pre": "She was kind", "ex_en_post": "me yesterday.", "ex_jp": "昨日、彼女は私に親切だった。", "note": "方向のto", "badgeType": "badge-grammar", "speech_text": "be kind to"},
+        {"id": 11, "unit": 1, "phrase": "be known to ~", "prep": "to", "prefix": "be known", "suffix": "~", "jp": "〜に知られている", "ex_en_pre": "His name is known", "ex_en_post": "everyone.", "ex_jp": "彼の名前はみんなに知られている。", "note": "byを使わない受動態", "badgeType": "badge-caution", "speech_text": "be known to"},
+        {"id": 12, "unit": 1, "phrase": "be late for ~", "prep": "for", "prefix": "be late", "suffix": "~", "jp": "〜に遅れる", "ex_en_pre": "I was late", "ex_en_post": "the class.", "ex_jp": "私は授業に遅れた。", "note": "対象のfor", "badgeType": "badge-grammar", "speech_text": "be late for"},
+        {"id": 13, "unit": 1, "phrase": "be made of ~", "prep": "of", "prefix": "be made", "suffix": "~(材料)", "jp": "〜でできている", "ex_en_pre": "This desk is made", "ex_en_post": "wood.", "ex_jp": "この机は木でできている。", "note": "見た目で材料がわかる", "badgeType": "badge-caution", "speech_text": "be made of"},
+        {"id": 14, "unit": 1, "phrase": "be made from ~", "prep": "from", "prefix": "be made", "suffix": "~(原料)", "jp": "〜から作られる", "ex_en_pre": "Cheese is made", "ex_en_post": "milk.", "ex_jp": "チーズは牛乳から作られる。", "note": "加工・化学変化", "badgeType": "badge-caution", "speech_text": "be made from"},
+        {"id": 15, "unit": 1, "phrase": "be ready to ~", "prep": "to", "prefix": "be ready", "suffix": "~", "jp": "〜の準備ができている", "ex_en_pre": "I'm ready", "ex_en_post": "go.", "ex_jp": "私は行く用意ができている。", "note": "準備完了", "badgeType": "badge-synonym", "speech_text": "be ready to"},
+        {"id": 16, "unit": 2, "phrase": "ask for ~", "prep": "for", "prefix": "ask", "suffix": "~", "jp": "〜を求める", "ex_en_pre": "He asked Mary", "ex_en_post": "help.", "ex_jp": "彼はメアリーに助けを求めた。", "note": "求めて依頼する", "badgeType": "badge-grammar", "speech_text": "ask for"},
+        {"id": 17, "unit": 2, "phrase": "ask 人 to ~", "prep": "to", "prefix": "ask 人", "suffix": "~", "jp": "人に〜するように頼む", "ex_en_pre": "He asked me", "ex_en_post": "wait.", "ex_jp": "彼は私に待つように頼んだ。", "note": "ask ＋ 人 ＋ to V", "badgeType": "badge-grammar", "speech_text": "ask someone to"},
+        {"id": 18, "unit": 2, "phrase": "call at ~", "prep": "at", "prefix": "call", "suffix": "~", "jp": "(場所を)訪問する", "ex_en_pre": "I called", "ex_en_post": "his house yesterday.", "ex_jp": "私は昨日、彼の家を訪問した。", "note": "at ＋ 場所", "badgeType": "badge-caution", "speech_text": "call at"},
+        {"id": 19, "unit": 2, "phrase": "call on ~", "prep": "on", "prefix": "call", "suffix": "~", "jp": "(人を)訪問する", "ex_en_pre": "I called", "ex_en_post": "him yesterday.", "ex_jp": "私は昨日、彼を訪問した。", "note": "on ＋ 人", "badgeType": "badge-caution", "speech_text": "call on"},
+        {"id": 20, "unit": 2, "phrase": "come from ~", "prep": "from", "prefix": "come", "suffix": "~", "jp": "〜の出身である", "ex_en_pre": "He comes", "ex_en_post": "England.", "ex_jp": "彼はイギリスの出身である。", "note": "be from と同義", "badgeType": "badge-synonym", "speech_text": "come from"},
+        {"id": 21, "unit": 2, "phrase": "come true", "prep": "true", "prefix": "come", "suffix": "", "jp": "実現する", "ex_en_pre": "Your dream will come", "ex_en_post": ".", "ex_jp": "君の夢は実現するでしょう。", "note": "夢・願いが叶う", "badgeType": "badge-synonym", "speech_text": "come true"},
+        {"id": 22, "unit": 2, "phrase": "do one's best", "prep": "best", "prefix": "do one's", "suffix": "", "jp": "最善をつくす", "ex_en_pre": "I'll do my", "ex_en_post": ".", "ex_jp": "私は最善をつくします。", "note": "所有格を入れる", "badgeType": "badge-caution", "speech_text": "do one's best"},
+        {"id": 23, "unit": 2, "phrase": "enjoy -ing", "prep": "-ing", "prefix": "enjoy", "suffix": "", "jp": "〜することを楽しむ", "ex_en_pre": "Tom enjoys playing", "ex_en_post": "baseball.", "ex_jp": "トムは野球を楽しんでいる。", "note": "動名詞のみをとる", "badgeType": "badge-caution", "speech_text": "enjoy -ing"},
+        {"id": 24, "unit": 2, "phrase": "find out ~", "prep": "out", "prefix": "find", "suffix": "~", "jp": "〜を発見する・調べる", "ex_en_pre": "I found", "ex_en_post": "the secret.", "ex_jp": "私はその秘密を発見した。", "note": "事実を突き止める", "badgeType": "badge-grammar", "speech_text": "find out"},
+        {"id": 25, "unit": 2, "phrase": "get to ~", "prep": "to", "prefix": "get", "suffix": "~", "jp": "〜に着く", "ex_en_pre": "When did you get", "ex_en_post": "Tokyo?", "ex_jp": "いつ東京に着きましたか。", "note": "arrive at / reach", "badgeType": "badge-synonym", "speech_text": "get to"},
+        {"id": 26, "unit": 2, "phrase": "give up ~", "prep": "up", "prefix": "give", "suffix": "~", "jp": "〜をあきらめる", "ex_en_pre": "Don't give", "ex_en_post": "! Try it again.", "ex_jp": "あきらめるな。もう一度やってみろ。", "note": "give up -ing も可", "badgeType": "badge-grammar", "speech_text": "give up"},
+        {"id": 27, "unit": 2, "phrase": "go for a walk", "prep": "for", "prefix": "go", "suffix": "a walk", "jp": "散歩に出かける", "ex_en_pre": "Let's go", "ex_en_post": "a walk.", "ex_jp": "散歩に行こう。", "note": "take a walk と同義", "badgeType": "badge-synonym", "speech_text": "go for a walk"},
+        {"id": 28, "unit": 2, "phrase": "have to ~", "prep": "to", "prefix": "have", "suffix": "~", "jp": "〜しなければならない", "ex_en_pre": "He has", "ex_en_post": "go now.", "ex_jp": "彼は今いかなければなりません。", "note": "must と同義", "badgeType": "badge-synonym", "speech_text": "have to"},
+        {"id": 29, "unit": 2, "phrase": "look for ~", "prep": "for", "prefix": "look", "suffix": "~", "jp": "〜をさがす", "ex_en_pre": "I looked", "ex_en_post": "him for an hour.", "ex_jp": "私は彼を1時間さがした。", "note": "探す動作", "badgeType": "badge-grammar", "speech_text": "look for"},
+        {"id": 30, "unit": 2, "phrase": "look forward to ~", "prep": "to", "prefix": "look forward", "suffix": "~", "jp": "〜を楽しみに待つ", "ex_en_pre": "I'm looking forward", "ex_en_post": "seeing you.", "ex_jp": "あなたに会えるのを楽しみにしています。", "note": "to ＋ 名詞/動名詞", "badgeType": "badge-caution", "speech_text": "look forward to"},
+        {"id": 31, "unit": 3, "phrase": "get up", "prep": "up", "prefix": "get", "suffix": "", "jp": "起きる", "ex_en_pre": "I got", "ex_en_post": "at six.", "ex_jp": "私は6時に起きた。", "note": "日常基本動作", "badgeType": "badge-grammar", "speech_text": "get up"},
+        {"id": 32, "unit": 3, "phrase": "get on ~", "prep": "on", "prefix": "get", "suffix": "~", "jp": "〜に乗る(電車・バス)", "ex_en_pre": "I got", "ex_en_post": "the train.", "ex_jp": "私はその列車に乗った。", "note": "乗り物に乗る", "badgeType": "badge-caution", "speech_text": "get on"},
+        {"id": 33, "unit": 3, "phrase": "get off ~", "prep": "off", "prefix": "get", "suffix": "~", "jp": "〜から降りる", "ex_en_pre": "Let's get", "ex_en_post": "the bus here.", "ex_jp": "ここでバスを降りましょう。", "note": "乗り物を降りる", "badgeType": "badge-caution", "speech_text": "get off"},
+        {"id": 34, "unit": 3, "phrase": "get out of ~", "prep": "of", "prefix": "get out", "suffix": "~", "jp": "〜から外に出る", "ex_en_pre": "Get out", "ex_en_post": "here at once.", "ex_jp": "ここからすぐに出て行きなさい。", "note": "外へ出る", "badgeType": "badge-grammar", "speech_text": "get out of"},
+        {"id": 35, "unit": 3, "phrase": "go back to ~", "prep": "to", "prefix": "go back", "suffix": "~", "jp": "〜へ帰る・戻る", "ex_en_pre": "She went back", "ex_en_post": "her room.", "ex_jp": "彼女は自分の部屋にもどった。", "note": "元の場所に戻る", "badgeType": "badge-grammar", "speech_text": "go back to"},
+        {"id": 36, "unit": 3, "phrase": "go to bed", "prep": "bed", "prefix": "go to", "suffix": "", "jp": "寝る", "ex_en_pre": "I usually go to", "ex_en_post": "at nine.", "ex_jp": "私はたいてい9時に寝る。", "note": "aやtheは付けない", "badgeType": "badge-caution", "speech_text": "go to bed"},
+        {"id": 37, "unit": 3, "phrase": "go out", "prep": "out", "prefix": "go", "suffix": "", "jp": "外出する", "ex_en_pre": "He didn't go", "ex_en_post": "yesterday.", "ex_jp": "彼は昨日外出しなかった。", "note": "家から出る", "badgeType": "badge-grammar", "speech_text": "go out"},
+        {"id": 38, "unit": 3, "phrase": "grow up", "prep": "up", "prefix": "grow", "suffix": "", "jp": "成長する・大人になる", "ex_en_pre": "I grew", "ex_en_post": "in Japan.", "ex_jp": "私は日本で育ちました。", "note": "過去形: grew", "badgeType": "badge-grammar", "speech_text": "grow up"},
+        {"id": 39, "unit": 3, "phrase": "hear of ~", "prep": "of", "prefix": "hear", "suffix": "~", "jp": "〜のことを耳にする", "ex_en_pre": "I have never heard", "ex_en_post": "the story.", "ex_jp": "私はその話を聞いたことがない。", "note": "噂・存在を知る", "badgeType": "badge-grammar", "speech_text": "hear of"},
+        {"id": 40, "unit": 3, "phrase": "hear from ~", "prep": "from", "prefix": "hear", "suffix": "~", "jp": "〜から便りがある", "ex_en_pre": "I heard", "ex_en_post": "him last month.", "ex_jp": "彼から先月便りがあった。", "note": "連絡をもらう", "badgeType": "badge-caution", "speech_text": "hear from"},
+        {"id": 41, "unit": 3, "phrase": "look at ~", "prep": "at", "prefix": "look", "suffix": "~", "jp": "〜を見る", "ex_en_pre": "Look", "ex_en_post": "the blackboard.", "ex_jp": "黒板を見なさい。", "note": "視線を向ける", "badgeType": "badge-grammar", "speech_text": "look at"},
+        {"id": 42, "unit": 3, "phrase": "look after ~", "prep": "after", "prefix": "look", "suffix": "~", "jp": "〜の世話をする", "ex_en_pre": "She looked", "ex_en_post": "the baby.", "ex_jp": "彼女はその赤ちゃんの世話をした。", "note": "take care of と同義", "badgeType": "badge-synonym", "speech_text": "look after"},
+        {"id": 43, "unit": 3, "phrase": "look like ~", "prep": "like", "prefix": "look", "suffix": "~", "jp": "〜のように見える", "ex_en_pre": "It looks", "ex_en_post": "rain.", "ex_jp": "雨が降りそうだ。", "note": "前置詞like", "badgeType": "badge-grammar", "speech_text": "look like"},
+        {"id": 44, "unit": 3, "phrase": "look up ~", "prep": "up", "prefix": "look", "suffix": "~", "jp": "見上げる / 辞書で調べる", "ex_en_pre": "Look", "ex_en_post": "the word in your dictionary.", "ex_jp": "辞書でその単語を調べなさい。", "note": "見上げる・調べる", "badgeType": "badge-caution", "speech_text": "look up"},
+        {"id": 45, "unit": 3, "phrase": "make a mistake", "prep": "mistake", "prefix": "make a", "suffix": "", "jp": "間違える", "ex_en_pre": "I made a", "ex_en_post": "in the test.", "ex_jp": "私はテストで間違いをした。", "note": "過去形: made", "badgeType": "badge-grammar", "speech_text": "make a mistake"},
+        {"id": 46, "unit": 4, "phrase": "make a speech", "prep": "speech", "prefix": "make a", "suffix": "", "jp": "スピーチ(演説)をする", "ex_en_pre": "He made a", "ex_en_post": "in English.", "ex_jp": "彼は英語で演説した。", "note": "演説を行う", "badgeType": "badge-grammar", "speech_text": "make a speech"},
+        {"id": 47, "unit": 4, "phrase": "pick up ~", "prep": "up", "prefix": "pick", "suffix": "~", "jp": "〜を拾い上げる / 車で拾う", "ex_en_pre": "He picked", "ex_en_post": "a coin.", "ex_jp": "彼はコインを拾い上げた。", "note": "拾う・迎える", "badgeType": "badge-grammar", "speech_text": "pick up"},
+        {"id": 48, "unit": 4, "phrase": "put on ~", "prep": "on", "prefix": "put", "suffix": "~", "jp": "〜を着る・身につける", "ex_en_pre": "He put", "ex_en_post": "the jacket.", "ex_jp": "彼はそのジャケットを着た。", "note": "脱ぐは take off", "badgeType": "badge-caution", "speech_text": "put on"},
+        {"id": 49, "unit": 4, "phrase": "run away", "prep": "away", "prefix": "run", "suffix": "", "jp": "逃げる・走り去る", "ex_en_pre": "He saw me and ran", "ex_en_post": ".", "ex_jp": "彼は私を見て逃げていった。", "note": "過去形: ran", "badgeType": "badge-grammar", "speech_text": "run away"},
+        {"id": 50, "unit": 4, "phrase": "say to oneself", "prep": "oneself", "prefix": "say to", "suffix": "", "jp": "心の中で思う・つぶやく", "ex_en_pre": "He said to", "ex_en_post": ", 'What shall I do?'", "ex_jp": "彼は心の中で『どうしよう』と思った。", "note": "再帰代名詞", "badgeType": "badge-caution", "speech_text": "say to oneself"},
+        {"id": 51, "unit": 4, "phrase": "speak to ~", "prep": "to", "prefix": "speak", "suffix": "~", "jp": "〜に話しかける", "ex_en_pre": "I was spoken", "ex_en_post": "by a stranger.", "ex_jp": "私は見知らぬ人に話しかけられた。", "note": "受動態で超頻出", "badgeType": "badge-caution", "speech_text": "speak to"},
+        {"id": 52, "unit": 4, "phrase": "stand up", "prep": "up", "prefix": "stand", "suffix": "", "jp": "立つ・立ち上がる", "ex_en_pre": "He stood", "ex_en_post": "and answered it.", "ex_jp": "彼は立ち上がって手に答えた。", "note": "起立動作", "badgeType": "badge-grammar", "speech_text": "stand up"},
+        {"id": 53, "unit": 4, "phrase": "stop -ing", "prep": "-ing", "prefix": "stop", "suffix": "", "jp": "〜するのをやめる", "ex_en_pre": "Stop talking", "ex_en_post": "!", "ex_jp": "おしゃべりはやめなさい！", "note": "動名詞をとる", "badgeType": "badge-caution", "speech_text": "stop -ing"},
+        {"id": 54, "unit": 4, "phrase": "take care of ~", "prep": "of", "prefix": "take care", "suffix": "~", "jp": "〜の世話をする", "ex_en_pre": "She took care", "ex_en_post": "him.", "ex_jp": "彼女は彼の世話をした。", "note": "look after と同義", "badgeType": "badge-synonym", "speech_text": "take care of"},
+        {"id": 55, "unit": 4, "phrase": "take a picture", "prep": "picture", "prefix": "take a", "suffix": "", "jp": "写真を撮る", "ex_en_pre": "I took a", "ex_en_post": "in the park.", "ex_jp": "私は公園で写真を撮った。", "note": "過去形: took", "badgeType": "badge-grammar", "speech_text": "take a picture"},
+        {"id": 56, "unit": 4, "phrase": "take off ~", "prep": "off", "prefix": "take", "suffix": "~", "jp": "〜を脱ぐ / 離陸する", "ex_en_pre": "Take", "ex_en_post": "your coat.", "ex_jp": "コートを脱ぎなさい。", "note": "着る(put on)の対義語", "badgeType": "badge-caution", "speech_text": "take off"},
+        {"id": 57, "unit": 4, "phrase": "take part in ~", "prep": "in", "prefix": "take part", "suffix": "~", "jp": "〜に参加する", "ex_en_pre": "They took part", "ex_en_post": "the contest.", "ex_jp": "彼らはコンテストに参加した。", "note": "join と同義", "badgeType": "badge-synonym", "speech_text": "take part in"},
+        {"id": 58, "unit": 4, "phrase": "take a walk", "prep": "walk", "prefix": "take a", "suffix": "", "jp": "散歩する", "ex_en_pre": "I often take a", "ex_en_post": "in the park.", "ex_jp": "私はよく公園を散歩する。", "note": "go for a walk と同義", "badgeType": "badge-synonym", "speech_text": "take a walk"},
+        {"id": 59, "unit": 4, "phrase": "talk about ~", "prep": "about", "prefix": "talk", "suffix": "~", "jp": "〜について話す", "ex_en_pre": "He talked", "ex_en_post": "his hobby.", "ex_jp": "彼は自分の趣味について話した。", "note": "内容のabout", "badgeType": "badge-grammar", "speech_text": "talk about"},
+        {"id": 60, "unit": 4, "phrase": "talk with ~", "prep": "with", "prefix": "talk", "suffix": "~", "jp": "〜と話す・会話する", "ex_en_pre": "I talked", "ex_en_post": "him for an hour.", "ex_jp": "私は1時間彼と話した。", "note": "相手のwith", "badgeType": "badge-grammar", "speech_text": "talk with"},
+        {"id": 61, "unit": 5, "phrase": "after all", "prep": "all", "prefix": "after", "suffix": "", "jp": "結局・ついに", "ex_en_pre": "He did not come after", "ex_en_post": ".", "ex_jp": "彼は結局来なかった。", "note": "文末で使う", "badgeType": "badge-grammar", "speech_text": "after all"},
+        {"id": 62, "unit": 5, "phrase": "after school", "prep": "school", "prefix": "after", "suffix": "", "jp": "放課後", "ex_en_pre": "Let's play tennis after", "ex_en_post": ".", "ex_jp": "放課後テニスをしよう。", "note": "日常必須表現", "badgeType": "badge-grammar", "speech_text": "after school"},
+        {"id": 63, "unit": 5, "phrase": "all day", "prep": "day", "prefix": "all", "suffix": "", "jp": "一日中", "ex_en_pre": "I was sick in bed all", "ex_en_post": "yesterday.", "ex_jp": "私は病気で昨日は一日中寝ていた。", "note": "一晩中は all night", "badgeType": "badge-grammar", "speech_text": "all day"},
+        {"id": 64, "unit": 5, "phrase": "all over ~", "prep": "over", "prefix": "all", "suffix": "~", "jp": "〜中で・至る所で", "ex_en_pre": "He is known all", "ex_en_post": "the world.", "ex_jp": "彼は世界中で知られている。", "note": "全体にわたって", "badgeType": "badge-grammar", "speech_text": "all over"},
+        {"id": 65, "unit": 5, "phrase": "all right", "prep": "right", "prefix": "all", "suffix": "", "jp": "よろしい・元気な・大丈夫で", "ex_en_pre": "Are you all", "ex_en_post": "today?", "ex_jp": "今日は身体の具合はいいですか。", "note": "体調・状況", "badgeType": "badge-grammar", "speech_text": "all right"},
+        {"id": 66, "unit": 5, "phrase": "around the world", "prep": "around", "prefix": "", "suffix": "the world", "jp": "世界中を・世界中の", "ex_en_pre": "I traveled", "ex_en_post": "the world.", "ex_jp": "私は世界中を旅行した。", "note": "世界をめぐる", "badgeType": "badge-synonym", "speech_text": "around the world"},
+        {"id": 67, "unit": 5, "phrase": "arrive at ~", "prep": "at", "prefix": "arrive", "suffix": "~", "jp": "〜に着く(狭い場所)", "ex_en_pre": "He arrived", "ex_en_post": "the station at eight.", "ex_jp": "彼は8時に駅に着いた。", "note": "都市・国は arrive in", "badgeType": "badge-caution", "speech_text": "arrive at"},
+        {"id": 68, "unit": 5, "phrase": "at first", "prep": "first", "prefix": "at", "suffix": "", "jp": "最初は・はじめは", "ex_en_pre": "At", "ex_en_post": "I didn't like him.", "ex_jp": "最初私は彼を好きでなかった。", "note": "文頭・時の対比", "badgeType": "badge-grammar", "speech_text": "at first"},
+        {"id": 69, "unit": 5, "phrase": "at home", "prep": "home", "prefix": "at", "suffix": "", "jp": "家で・在宅して", "ex_en_pre": "Were you at", "ex_en_post": "last night?", "ex_jp": "あなたは昨夜家にいましたか。", "note": "在宅を表す", "badgeType": "badge-grammar", "speech_text": "at home"},
+        {"id": 70, "unit": 5, "phrase": "at last", "prep": "last", "prefix": "at", "suffix": "", "jp": "ついに・とうとう", "ex_en_pre": "At", "ex_en_post": "she passed the test.", "ex_jp": "ついに彼女はその試験に合格した。", "note": "最後には", "badgeType": "badge-synonym", "speech_text": "at last"},
+        {"id": 71, "unit": 5, "phrase": "at once", "prep": "once", "prefix": "at", "suffix": "", "jp": "すぐに・ただちに", "ex_en_pre": "Come here at", "ex_en_post": ".", "ex_jp": "すぐにここに来なさい。", "note": "right away と同義", "badgeType": "badge-synonym", "speech_text": "at once"},
+        {"id": 72, "unit": 5, "phrase": "at that time", "prep": "that", "prefix": "at", "suffix": "time", "jp": "そのとき(当時)", "ex_en_pre": "I was reading a book at", "ex_en_post": "time.", "ex_jp": "私はその時本を読んでいた。", "note": "過去進行形と相性◎", "badgeType": "badge-grammar", "speech_text": "at that time"},
+        {"id": 73, "unit": 5, "phrase": "by the way", "prep": "way", "prefix": "by the", "suffix": "", "jp": "ところで(会話の転換)", "ex_en_pre": "By the", "ex_en_post": ", I saw him yesterday.", "ex_jp": "ところで、昨日彼を見たよ。", "note": "話題を変える時", "badgeType": "badge-grammar", "speech_text": "by the way"},
+        {"id": 74, "unit": 5, "phrase": "for a long time", "prep": "long", "prefix": "for a", "suffix": "time", "jp": "長い間", "ex_en_pre": "I haven't seen him for a", "ex_en_post": "time.", "ex_jp": "私は彼に長い間会っていない。", "note": "現在完了形とともに", "badgeType": "badge-grammar", "speech_text": "for a long time"},
+        {"id": 75, "unit": 5, "phrase": "for the first time", "prep": "first", "prefix": "for the", "suffix": "time", "jp": "はじめて", "ex_en_pre": "I went there for the", "ex_en_post": "time.", "ex_jp": "私はそこにはじめて行った。", "note": "初体験を表す", "badgeType": "badge-grammar", "speech_text": "for the first time"},
+        {"id": 76, "unit": 6, "phrase": "by oneself", "prep": "oneself", "prefix": "by", "suffix": "", "jp": "独力で・一人で", "ex_en_pre": "He went there by", "ex_en_post": ".", "ex_jp": "彼は独力でそこへ行った。", "note": "for oneself との違い", "badgeType": "badge-caution", "speech_text": "by oneself"},
+        {"id": 77, "unit": 6, "phrase": "each other", "prep": "other", "prefix": "each", "suffix": "", "jp": "お互いに", "ex_en_pre": "They helped each", "ex_en_post": ".", "ex_jp": "彼らはお互い助け合った。", "note": "相互関係", "badgeType": "badge-grammar", "speech_text": "each other"},
+        {"id": 78, "unit": 6, "phrase": "from A to B", "prep": "to", "prefix": "from A", "suffix": "B", "jp": "AからBまで", "ex_en_pre": "I studied from seven", "ex_en_post": "ten.", "ex_jp": "私は7時から10時まで勉強した。", "note": "時間・場所の範囲", "badgeType": "badge-grammar", "speech_text": "from A to B"},
+        {"id": 79, "unit": 6, "phrase": "from now on", "prep": "now", "prefix": "from", "suffix": "on", "jp": "今後・これからずっと", "ex_en_pre": "I will study harder from", "ex_en_post": "on.", "ex_jp": "私は今後もっと熱心に勉強します。", "note": "将来に向かって", "badgeType": "badge-grammar", "speech_text": "from now on"},
+        {"id": 80, "unit": 6, "phrase": "in fact", "prep": "fact", "prefix": "in", "suffix": "", "jp": "実際は・実は", "ex_en_pre": "In", "ex_en_post": ", I can't swim.", "ex_jp": "実は、私は泳げません。", "note": "本音・実情を言う", "badgeType": "badge-grammar", "speech_text": "in fact"},
+        {"id": 81, "unit": 6, "phrase": "in front of ~", "prep": "front", "prefix": "in", "suffix": "of ~", "jp": "〜の前に(場所)", "ex_en_pre": "I stood in", "ex_en_post": "of the mirror.", "ex_jp": "私は鏡の前に立った。", "note": "位置関係", "badgeType": "badge-grammar", "speech_text": "in front of"},
+        {"id": 82, "unit": 6, "phrase": "in time for ~", "prep": "time", "prefix": "in", "suffix": "for ~", "jp": "〜に間に合って", "ex_en_pre": "Ken was in", "ex_en_post": "for dinner.", "ex_jp": "健は夕食に間に合った。", "note": "時間どおりは on time", "badgeType": "badge-caution", "speech_text": "in time for"},
+        {"id": 83, "unit": 6, "phrase": "in order to ~", "prep": "order", "prefix": "in", "suffix": "to ~", "jp": "〜するために(目的)", "ex_en_pre": "I studied in", "ex_en_post": "to pass the exam.", "ex_jp": "私は試験に受かるため勉強した。", "note": "目的を表す不定詞", "badgeType": "badge-grammar", "speech_text": "in order to"},
+        {"id": 84, "unit": 6, "phrase": "next to ~", "prep": "to", "prefix": "next", "suffix": "~", "jp": "〜のとなりに", "ex_en_pre": "He sat next", "ex_en_post": "me.", "ex_jp": "彼は私のとなりにすわった。", "note": "隣接の位置", "badgeType": "badge-grammar", "speech_text": "next to"},
+        {"id": 85, "unit": 6, "phrase": "not at all", "prep": "all", "prefix": "not at", "suffix": "", "jp": "少しも〜ない / どういたしまして", "ex_en_pre": "I can't speak English at", "ex_en_post": ".", "ex_jp": "私は少しも英語が話せません。", "note": "完全否定 / 応答", "badgeType": "badge-caution", "speech_text": "not at all"},
+        {"id": 86, "unit": 6, "phrase": "of course", "prep": "course", "prefix": "of", "suffix": "", "jp": "もちろん", "ex_en_pre": "Of", "ex_en_post": "I will go with you.", "ex_jp": "もちろん、あなたと一緒に行くよ。", "note": "快諾・当然の応答", "badgeType": "badge-grammar", "speech_text": "of course"},
+        {"id": 87, "unit": 6, "phrase": "on foot", "prep": "foot", "prefix": "on", "suffix": "", "jp": "徒歩で・歩いて", "ex_en_pre": "Do you go to school on", "ex_en_post": "?", "ex_jp": "学校へ徒歩で通ってるんですか。", "note": "by ＋ 交通手段", "badgeType": "badge-caution", "speech_text": "on foot"},
+        {"id": 88, "unit": 6, "phrase": "on one's way home", "prep": "way", "prefix": "on my", "suffix": "home", "jp": "家に帰る途中で", "ex_en_pre": "I saw him on my", "ex_en_post": "home.", "ex_jp": "家に帰る途中、私は彼に会った。", "note": "homeにtoは不要", "badgeType": "badge-caution", "speech_text": "on my way home"},
+        {"id": 89, "unit": 6, "phrase": "on one's way to ~", "prep": "way", "prefix": "on my", "suffix": "to ~", "jp": "〜へ行く途中で", "ex_en_pre": "On my", "ex_en_post": "to school, I met her.", "ex_jp": "学校へ行く途中、私は彼女に会った。", "note": "途中の過程", "badgeType": "badge-grammar", "speech_text": "on my way to"},
+        {"id": 90, "unit": 6, "phrase": "one of ~", "prep": "of", "prefix": "one", "suffix": "~", "jp": "〜のうちの一つ(一人)", "ex_en_pre": "This is one", "ex_en_post": "them.", "ex_jp": "これはそれらの中の一つです。", "note": "後ろは複数形", "badgeType": "badge-caution", "speech_text": "one of"},
+        {"id": 91, "unit": 7, "phrase": "Shall I ~ ?", "prep": "Shall", "prefix": "", "suffix": "I open the door?", "jp": "〜しましょうか。(申出)", "ex_en_pre": "", "ex_en_post": "I open the door?", "ex_jp": "ドアを開けましょうか。", "note": "自分の申出", "badgeType": "badge-grammar", "speech_text": "Shall I open the door"},
+        {"id": 92, "unit": 7, "phrase": "Shall we ~ ?", "prep": "Shall", "prefix": "", "suffix": "we play some games?", "jp": "〜しませんか。(勧誘)", "ex_en_pre": "", "ex_en_post": "we play some games?", "ex_jp": "なにかゲームをしませんか。", "note": "Let's ~ と同義", "badgeType": "badge-synonym", "speech_text": "Shall we play some games"},
+        {"id": 93, "unit": 7, "phrase": "How about ~ ?", "prep": "about", "prefix": "How", "suffix": "a cup of tea?", "jp": "〜はどうですか。", "ex_en_pre": "How", "ex_en_post": "a cup of tea?", "ex_jp": "紅茶を一杯いかがですか。", "note": "提案・勧誘", "badgeType": "badge-grammar", "speech_text": "How about"},
+        {"id": 94, "unit": 7, "phrase": "How far ~ ?", "prep": "far", "prefix": "How", "suffix": "did you swim?", "jp": "どのくらいの距離〜？", "ex_en_pre": "How", "ex_en_post": "did you swim?", "ex_jp": "あなたはどのくらい泳ぎましたか。", "note": "距離を尋ねる", "badgeType": "badge-grammar", "speech_text": "How far"},
+        {"id": 95, "unit": 7, "phrase": "How long ~ ?", "prep": "long", "prefix": "How", "suffix": "is this line?", "jp": "どのくらい長く(時間・長さ)〜？", "ex_en_pre": "How", "ex_en_post": "is this line?", "ex_jp": "この線はどのくらいの長さですか。", "note": "期間・長さを尋ねる", "badgeType": "badge-grammar", "speech_text": "How long"},
+        {"id": 96, "unit": 7, "phrase": "How often ~ ?", "prep": "often", "prefix": "How", "suffix": "do you go there?", "jp": "どのくらいの頻度で(何回)〜？", "ex_en_pre": "How", "ex_en_post": "do you go there in a week?", "ex_jp": "週に何回ぐらいそこへ行くのですか。", "note": "頻度を尋ねる", "badgeType": "badge-caution", "speech_text": "How often"},
+        {"id": 97, "unit": 7, "phrase": "How to ~", "prep": "to", "prefix": "how", "suffix": "drive a car", "jp": "〜のしかた・方法", "ex_en_pre": "I don't know how", "ex_en_post": "drive a car.", "ex_jp": "私は車の運転の仕方を知りません。", "note": "疑問詞 ＋ to不定詞", "badgeType": "badge-grammar", "speech_text": "how to"},
+        {"id": 98, "unit": 7, "phrase": "What to ~", "prep": "to", "prefix": "what", "suffix": "say", "jp": "何を〜したらよいか", "ex_en_pre": "I don't know what", "ex_en_post": "say.", "ex_jp": "何を言ったらよいか私はわからない。", "note": "疑問詞 ＋ to不定詞", "badgeType": "badge-grammar", "speech_text": "what to"},
+        {"id": 99, "unit": 7, "phrase": "What about ~ ?", "prep": "about", "prefix": "What", "suffix": "a walk with me?", "jp": "〜はいかがですか。", "ex_en_pre": "What", "ex_en_post": "a walk with me?", "ex_jp": "一緒に散歩するのはどうですか。", "note": "How about と同義", "badgeType": "badge-synonym", "speech_text": "What about"},
+        {"id": 100, "unit": 7, "phrase": "What kind of ~", "prep": "kind", "prefix": "What", "suffix": "of car do you have?", "jp": "どんな種類の〜？", "ex_en_pre": "What", "ex_en_post": "of car do you have?", "ex_jp": "あなたはどんな種類の車を持っていますか。", "note": "種類を尋ねる", "badgeType": "badge-grammar", "speech_text": "What kind of"},
+        {"id": 101, "unit": 7, "phrase": "What's up ?", "prep": "up", "prefix": "What's", "suffix": "?", "jp": "どうしたの・何かあったの", "ex_en_pre": "What's", "ex_en_post": "? Nothing.", "ex_jp": "何があったのですか。いいえ、何も。", "note": "挨拶・状況確認", "badgeType": "badge-grammar", "speech_text": "What is up"},
+        {"id": 102, "unit": 7, "phrase": "What's wrong ?", "prep": "wrong", "prefix": "What's", "suffix": "with him?", "jp": "どこか悪いのですか", "ex_en_pre": "What's", "ex_en_post": "with him?", "ex_jp": "彼はどこか具合が悪いのですか。", "note": "トラブルの確認", "badgeType": "badge-caution", "speech_text": "What is wrong"},
+        {"id": 103, "unit": 7, "phrase": "Why don't you ~ ?", "prep": "you", "prefix": "Why don't", "suffix": "come to my home?", "jp": "〜しませんか。(提案)", "ex_en_pre": "Why don't", "ex_en_post": "come to my home?", "ex_jp": "私の家に来ませんか。", "note": "相手への提案", "badgeType": "badge-caution", "speech_text": "Why don't you"},
+        {"id": 104, "unit": 7, "phrase": "Why don't we ~ ?", "prep": "we", "prefix": "Why don't", "suffix": "go shopping?", "jp": "いっしょに〜しよう", "ex_en_pre": "Why don't", "ex_en_post": "go shopping?", "ex_jp": "いっしょに買い物に行きましょう。", "note": "Let's ~ と同義", "badgeType": "badge-synonym", "speech_text": "Why don't we"},
+        {"id": 105, "unit": 7, "phrase": "Will you ~ ?", "prep": "Will", "prefix": "", "suffix": "you help me?", "jp": "〜してくれませんか。(依頼)", "ex_en_pre": "", "ex_en_post": "you help me?", "ex_jp": "私を手伝ってくれませんか。", "note": "相手への依頼", "badgeType": "badge-grammar", "speech_text": "Will you help me"},
+        {"id": 106, "unit": 8, "phrase": "would like to ~", "prep": "like", "prefix": "would", "suffix": "to go swimming.", "jp": "〜したいと思う", "ex_en_pre": "I'd", "ex_en_post": "to go swimming.", "ex_jp": "私は泳ぎに行きたいです。", "note": "want to の丁寧語", "badgeType": "badge-synonym", "speech_text": "would like to"},
+        {"id": 107, "unit": 8, "phrase": "Would you like to ~ ?", "prep": "like", "prefix": "Would you", "suffix": "to go shopping?", "jp": "〜しませんか・〜いかがですか", "ex_en_pre": "Would you", "ex_en_post": "to go shopping?", "ex_jp": "買い物に行きませんか。", "note": "丁寧な勧誘", "badgeType": "badge-caution", "speech_text": "Would you like to"},
+        {"id": 108, "unit": 8, "phrase": "Would you like ~ ?", "prep": "like", "prefix": "Would you", "suffix": "another cup of tea?", "jp": "〜はいかがですか(物)", "ex_en_pre": "Would you", "ex_en_post": "another cup of tea?", "ex_jp": "お茶をもう一杯いかがですか。", "note": "勧誘・提供", "badgeType": "badge-grammar", "speech_text": "Would you like"},
+        {"id": 109, "unit": 8, "phrase": "feel sick", "prep": "sick", "prefix": "feel", "suffix": "", "jp": "気分が悪い・気分を害する", "ex_en_pre": "I feel", "ex_en_post": ".", "ex_jp": "私は気分が悪い。", "note": "体調不良", "badgeType": "badge-grammar", "speech_text": "feel sick"},
+        {"id": 110, "unit": 8, "phrase": "need to ~", "prep": "to", "prefix": "need", "suffix": "~", "jp": "〜する必要がある", "ex_en_pre": "You need", "ex_en_post": "be more careful.", "ex_jp": "あなたはもっと注意が必要です。", "note": "必要性を表す", "badgeType": "badge-grammar", "speech_text": "need to"},
+        {"id": 111, "unit": 8, "phrase": "hope that ~", "prep": "that", "prefix": "hope", "suffix": "~", "jp": "〜を望む・〜だといいと思う", "ex_en_pre": "I hope", "ex_en_post": "it will be fine tomorrow.", "ex_jp": "明日は天気がよいといいと思います。", "note": "望みを伝える", "badgeType": "badge-grammar", "speech_text": "hope that"},
+        {"id": 112, "unit": 8, "phrase": "think that ~", "prep": "that", "prefix": "think", "suffix": "~", "jp": "〜と思う", "ex_en_pre": "I think", "ex_en_post": "he will come.", "ex_jp": "私は彼が来るだろうと思います。", "note": "接続詞thatの省略可", "badgeType": "badge-grammar", "speech_text": "think that"},
+        {"id": 113, "unit": 8, "phrase": "be afraid that ~", "prep": "that", "prefix": "be afraid", "suffix": "~", "jp": "〜かと心配する / 残念ながら〜だ", "ex_en_pre": "I am afraid", "ex_en_post": "he is sick.", "ex_jp": "私は彼が病気でないかと心配です。", "note": "心配・懸念のthat", "badgeType": "badge-caution", "speech_text": "be afraid that"},
+        {"id": 114, "unit": 8, "phrase": "worry about ~", "prep": "about", "prefix": "worry", "suffix": "~", "jp": "〜を心配する", "ex_en_pre": "Don't worry", "ex_en_post": "my health.", "ex_jp": "私の健康の事は心配するな。", "note": "be worried about 同義", "badgeType": "badge-synonym", "speech_text": "worry about"},
+        {"id": 115, "unit": 8, "phrase": "learn about ~", "prep": "about", "prefix": "learn", "suffix": "~", "jp": "〜のことを知る・学ぶ", "ex_en_pre": "Let's learn", "ex_en_post": "America.", "ex_jp": "アメリカについて学びましょう。", "note": "知識を得る", "badgeType": "badge-grammar", "speech_text": "learn about"},
+        {"id": 116, "unit": 8, "phrase": "think about ~", "prep": "about", "prefix": "think", "suffix": "~", "jp": "〜について考える", "ex_en_pre": "I was thinking", "ex_en_post": "the future.", "ex_jp": "私は将来について考えていた。", "note": "熟考する", "badgeType": "badge-grammar", "speech_text": "think about"},
+        {"id": 117, "unit": 8, "phrase": "think of ~", "prep": "of", "prefix": "think", "suffix": "~", "jp": "〜を思いつく・考案する", "ex_en_pre": "I thought", "ex_en_post": "a good idea.", "ex_jp": "私はよい考えを思いついた。", "note": "アイディアが浮かぶ", "badgeType": "badge-caution", "speech_text": "think of"},
+        {"id": 118, "unit": 8, "phrase": "thank A for B", "prep": "for", "prefix": "thank you", "suffix": "your help", "jp": "AにBのことで感謝する", "ex_en_pre": "Thank you", "ex_en_post": "your help.", "ex_jp": "助けていただいて感謝します。", "note": "感謝の理由のfor", "badgeType": "badge-grammar", "speech_text": "thank someone for"},
+        {"id": 119, "unit": 8, "phrase": "thanks to ~", "prep": "to", "prefix": "thanks", "suffix": "~", "jp": "〜のおかげで", "ex_en_pre": "Thanks", "ex_en_post": "you, I could do it.", "ex_jp": "君のおかげで、私はそれができた。", "note": "感謝・原因", "badgeType": "badge-caution", "speech_text": "thanks to"},
+        {"id": 120, "unit": 8, "phrase": "try to ~", "prep": "to", "prefix": "try", "suffix": "~", "jp": "〜しようと努める・試みる", "ex_en_pre": "He tried", "ex_en_post": "understand that.", "ex_jp": "彼はそれを理解しようと努めた。", "note": "try -ing (試しにする)", "badgeType": "badge-caution", "speech_text": "try to"},
+        {"id": 121, "unit": 9, "phrase": "a cup of ~", "prep": "of", "prefix": "a cup", "suffix": "milk", "jp": "コップ(カップ)一杯の〜", "ex_en_pre": "I want a cup", "ex_en_post": "milk.", "ex_jp": "私は一杯のミルクがほしい。", "note": "数えられない名詞の数え方", "badgeType": "badge-grammar", "speech_text": "a cup of"},
+        {"id": 122, "unit": 9, "phrase": "a pair of ~", "prep": "of", "prefix": "a pair", "suffix": "shoes", "jp": "一対の〜・一足の〜", "ex_en_pre": "My father gave me a pair", "ex_en_post": "shoes.", "ex_jp": "父が私に一対のくつをくれた。", "note": "靴・眼鏡・ハサミ等", "badgeType": "badge-caution", "speech_text": "a pair of"},
+        {"id": 123, "unit": 9, "phrase": "a piece of ~", "prep": "of", "prefix": "a piece", "suffix": "cake", "jp": "1片の〜・一切れの〜", "ex_en_pre": "Give me a piece", "ex_en_post": "cake.", "ex_jp": "一切れのケーキをください。", "note": "紙・ケーキ等の単位", "badgeType": "badge-grammar", "speech_text": "a piece of"},
+        {"id": 124, "unit": 9, "phrase": "a few ~", "prep": "few", "prefix": "a", "suffix": "books", "jp": "少しの〜・2〜3の〜", "ex_en_pre": "He has a", "ex_en_post": "books.", "ex_jp": "彼は数冊の本を持っています。", "note": "可算名詞の複数形をとる", "badgeType": "badge-caution", "speech_text": "a few"},
+        {"id": 125, "unit": 9, "phrase": "a little ~", "prep": "little", "prefix": "a", "suffix": "money", "jp": "少しの〜(不可算)", "ex_en_pre": "I have a", "ex_en_post": "money.", "ex_jp": "私は少しのお金を持っています。", "note": "不可算名詞をとる", "badgeType": "badge-caution", "speech_text": "a little"},
+        {"id": 126, "unit": 9, "phrase": "a lot of ~", "prep": "lot", "prefix": "a", "suffix": "of things", "jp": "たくさんの〜", "ex_en_pre": "I have a", "ex_en_post": "of things to do.", "ex_jp": "私はすることがたくさんあります。", "note": "lots of と同義", "badgeType": "badge-synonym", "speech_text": "a lot of"},
+        {"id": 127, "unit": 9, "phrase": "a kind of ~", "prep": "kind", "prefix": "a", "suffix": "of wrestling", "jp": "〜の一種・〜のようなもの", "ex_en_pre": "Sumo is a", "ex_en_post": "of wrestling.", "ex_jp": "相撲はレスリングのようなものです。", "note": "種類を表す", "badgeType": "badge-grammar", "speech_text": "a kind of"},
+        {"id": 128, "unit": 9, "phrase": "part of ~", "prep": "part", "prefix": "a", "suffix": "of the class", "jp": "〜の一部", "ex_en_pre": "A", "ex_en_post": "of the class is singing.", "ex_jp": "クラスの一部が歌っています。", "note": "部分を表す", "badgeType": "badge-grammar", "speech_text": "part of"},
+        {"id": 129, "unit": 9, "phrase": "as ... as possible", "prep": "possible", "prefix": "as fast as", "suffix": "", "jp": "できるだけ〜", "ex_en_pre": "He ran as fast as", "ex_en_post": ".", "ex_jp": "彼はできるだけ速く走った。", "note": "as ... as one can", "badgeType": "badge-synonym", "speech_text": "as fast as possible"},
+        {"id": 130, "unit": 9, "phrase": "as ... as one can", "prep": "can", "prefix": "as soon as you", "suffix": "", "jp": "できるだけ〜", "ex_en_pre": "Come as soon as you", "ex_en_post": ".", "ex_jp": "できるだけ早く来なさい。", "note": "主語＋can/could", "badgeType": "badge-synonym", "speech_text": "as soon as you can"},
+        {"id": 131, "unit": 9, "phrase": "as soon as ~", "prep": "soon", "prefix": "as", "suffix": "as ~", "jp": "〜するとすぐに", "ex_en_pre": "As", "ex_en_post": "as he went out, she cried.", "ex_jp": "彼が出て行くとすぐに、彼女は泣いた。", "note": "接続詞の役割", "badgeType": "badge-caution", "speech_text": "as soon as"},
+        {"id": 132, "unit": 9, "phrase": "as usual", "prep": "usual", "prefix": "as", "suffix": "", "jp": "いつものとおり", "ex_en_pre": "He came late as", "ex_en_post": ".", "ex_jp": "彼はいつものとおり遅れて来た。", "note": "相変わらず", "badgeType": "badge-grammar", "speech_text": "as usual"},
+        {"id": 133, "unit": 9, "phrase": "as well as ~", "prep": "well", "prefix": "as", "suffix": "as ~", "jp": "〜と同様に...も", "ex_en_pre": "He likes baseball as", "ex_en_post": "as tennis.", "ex_jp": "彼はテニスと同様に野球も好きです。", "note": "後ろから訳す", "badgeType": "badge-caution", "speech_text": "as well as"},
+        {"id": 134, "unit": 9, "phrase": "better than ~", "prep": "than", "prefix": "better", "suffix": "~", "jp": "〜よりよく...", "ex_en_pre": "She plays the piano better", "ex_en_post": "he.", "ex_jp": "彼女は彼より上手にピアノを弾く。", "note": "wellの比較級", "badgeType": "badge-grammar", "speech_text": "better than"},
+        {"id": 135, "unit": 9, "phrase": "more than ~", "prep": "than", "prefix": "more", "suffix": "~", "jp": "〜以上・〜より多く", "ex_en_pre": "He has more", "ex_en_post": "two dictionaries.", "ex_jp": "彼は2冊以上の辞書を持っている。", "note": "数量の超過", "badgeType": "badge-grammar", "speech_text": "more than"},
+        {"id": 136, "unit": 10, "phrase": "It is ~ to ...", "prep": "to", "prefix": "It is difficult", "suffix": "read this book.", "jp": "･･･するのは〜だ(仮主語)", "ex_en_pre": "It is difficult", "ex_en_post": "read this book.", "ex_jp": "この本を読むのは難しい。", "note": "It is ＋ 形容詞 ＋ to V", "badgeType": "badge-grammar", "speech_text": "It is difficult to read this book"},
+        {"id": 137, "unit": 10, "phrase": "It takes ~ to ...", "prep": "takes", "prefix": "It", "suffix": "a few minutes to get there.", "jp": "･･･するのに〜(時間)がかかる", "ex_en_pre": "It", "ex_en_post": "a few minutes to get there.", "ex_jp": "そこに着くのに2、3分かかります。", "note": "時間の経過", "badgeType": "badge-caution", "speech_text": "It takes a few minutes to get there"},
+        {"id": 138, "unit": 10, "phrase": "It's kind of you", "prep": "kind", "prefix": "It's", "suffix": "of you to help me.", "jp": "ご親切にありがとうございます", "ex_en_pre": "It's", "ex_en_post": "of you to help me.", "ex_jp": "手伝ってくれてありがとう。", "note": "人の性質を表すof", "badgeType": "badge-caution", "speech_text": "It is kind of you to help me"},
+        {"id": 139, "unit": 10, "phrase": "It's getting dark", "prep": "getting", "prefix": "It's", "suffix": "dark.", "jp": "暗くなってきた", "ex_en_pre": "It's", "ex_en_post": "dark.", "ex_jp": "暗くなってきた。", "note": "変化を表すget", "badgeType": "badge-grammar", "speech_text": "It is getting dark"},
+        {"id": 140, "unit": 10, "phrase": "both A and B", "prep": "and", "prefix": "both A", "suffix": "B", "jp": "AもBも両方とも", "ex_en_pre": "Both he", "ex_en_post": "she are healthy.", "ex_jp": "彼も彼女も共に健康です。", "note": "複数扱いにする", "badgeType": "badge-caution", "speech_text": "both A and B"},
+        {"id": 141, "unit": 10, "phrase": "either A or B", "prep": "or", "prefix": "either A", "suffix": "B", "jp": "AかBのどちらか", "ex_en_pre": "Either you", "ex_en_post": "I must go.", "ex_jp": "君か私かどちらかが行く必要がある。", "note": "どちらか一方", "badgeType": "badge-caution", "speech_text": "either A or B"},
+        {"id": 142, "unit": 10, "phrase": "not only A but also B", "prep": "but", "prefix": "not only A", "suffix": "also B", "jp": "AだけでなくBもまた", "ex_en_pre": "Not only he", "ex_en_post": "also I like English.", "ex_jp": "彼ばかりでなく私も英語が好きだ。", "note": "動詞はBに合わせる", "badgeType": "badge-caution", "speech_text": "not only A but also B"},
+        {"id": 143, "unit": 10, "phrase": "between A and B", "prep": "and", "prefix": "between A", "suffix": "B", "jp": "AとBの間に", "ex_en_pre": "I sat between Ken", "ex_en_post": "Bob.", "ex_jp": "私はケンとボブの間に座った。", "note": "2つの間", "badgeType": "badge-grammar", "speech_text": "between A and B"},
+        {"id": 144, "unit": 10, "phrase": "before long", "prep": "long", "prefix": "before", "suffix": "", "jp": "まもなく・間もなく", "ex_en_pre": "He will be back before", "ex_en_post": ".", "ex_jp": "彼はまもなく戻るだろう。", "note": "soon と同義", "badgeType": "badge-synonym", "speech_text": "before long"},
+        {"id": 145, "unit": 10, "phrase": "before noon", "prep": "noon", "prefix": "before", "suffix": "", "jp": "正午前", "ex_en_pre": "Ken had lunch before", "ex_en_post": ".", "ex_jp": "健は正午前に昼食をとった。", "note": "午前のうち", "badgeType": "badge-grammar", "speech_text": "before noon"},
+        {"id": 146, "unit": 10, "phrase": "long ago", "prep": "ago", "prefix": "long", "suffix": "", "jp": "ずっと前に・昔々", "ex_en_pre": "I visited Kyoto long", "ex_en_post": ".", "ex_jp": "私はずっと前に京都に行った。", "note": "過去の時点", "badgeType": "badge-grammar", "speech_text": "long ago"},
+        {"id": 147, "unit": 10, "phrase": "the other day", "prep": "other", "prefix": "the", "suffix": "day", "jp": "先日・このあいだ", "ex_en_pre": "I bought this book the", "ex_en_post": "day.", "ex_jp": "私は先日この本を買った。", "note": "過去の特定日", "badgeType": "badge-grammar", "speech_text": "the other day"},
+        {"id": 148, "unit": 10, "phrase": "the next day", "prep": "next", "prefix": "the", "suffix": "day", "jp": "その翌日", "ex_en_pre": "They left Tokyo the", "ex_en_post": "day.", "ex_jp": "彼らは翌日東京をたった。", "note": "翌日の表現", "badgeType": "badge-grammar", "speech_text": "the next day"},
+        {"id": 149, "unit": 10, "phrase": "thousands of ~", "prep": "thousands", "prefix": "", "suffix": "of stars", "jp": "何千もの〜・多数の", "ex_en_pre": "There are", "ex_en_post": "of stars in the sky.", "ex_jp": "空には何千もの星がある。", "note": "複数形のsを付ける", "badgeType": "badge-caution", "speech_text": "thousands of"},
+        {"id": 150, "unit": 10, "phrase": "The number of ~", "prep": "number", "prefix": "The", "suffix": "of boys", "jp": "〜の数(単数扱い)", "ex_en_pre": "The", "ex_en_post": "of boys was three.", "ex_jp": "少年の数は3人だった。", "note": "単数扱い(was/is)", "badgeType": "badge-caution", "speech_text": "The number of"},
+        {"id": 151, "unit": 11, "phrase": "turn on ~", "prep": "on", "prefix": "turn", "suffix": "~", "jp": "(明かり・テレビを)つける", "ex_en_pre": "Turn", "ex_en_post": "the light.", "ex_jp": "明かりをつけなさい。", "note": "スイッチを入れる", "badgeType": "badge-grammar", "speech_text": "turn on"},
+        {"id": 152, "unit": 11, "phrase": "turn off ~", "prep": "off", "prefix": "turn", "suffix": "~", "jp": "(明かりなどを)消す", "ex_en_pre": "She turned", "ex_en_post": "the radio.", "ex_jp": "彼女はラジオを消した。", "note": "スイッチを切る", "badgeType": "badge-grammar", "speech_text": "turn off"},
+        {"id": 153, "unit": 11, "phrase": "turn down ~", "prep": "down", "prefix": "turn", "suffix": "~", "jp": "(音量を)小さくする", "ex_en_pre": "She turned", "ex_en_post": "the radio.", "ex_jp": "彼女はラジオの音を小さくした。", "note": "音量を下げる", "badgeType": "badge-grammar", "speech_text": "turn down"},
+        {"id": 154, "unit": 11, "phrase": "wake up", "prep": "up", "prefix": "wake", "suffix": "", "jp": "目を覚ます", "ex_en_pre": "I woke", "ex_en_post": "at seven.", "ex_jp": "私は7時に目が覚めた。", "note": "過去形: woke", "badgeType": "badge-grammar", "speech_text": "wake up"},
+        {"id": 155, "unit": 11, "phrase": "wait for ~", "prep": "for", "prefix": "wait", "suffix": "~", "jp": "〜を待つ", "ex_en_pre": "He was waiting", "ex_en_post": "his father.", "ex_jp": "彼は彼の父親を待っていた。", "note": "進行形でも頻出", "badgeType": "badge-grammar", "speech_text": "wait for"},
+        {"id": 156, "unit": 11, "phrase": "walk around", "prep": "around", "prefix": "walk", "suffix": "", "jp": "あちこち歩き回る", "ex_en_pre": "He walked", "ex_en_post": ".", "ex_jp": "彼はあちこち歩き回った。", "note": "散策する", "badgeType": "badge-grammar", "speech_text": "walk around"},
+        {"id": 157, "unit": 11, "phrase": "throw away ~", "prep": "away", "prefix": "throw", "suffix": "~", "jp": "〜を投げ捨てる", "ex_en_pre": "Don't throw", "ex_en_post": "an empty can.", "ex_jp": "空き缶を投げ捨ててはいけません。", "note": "ゴミを捨てる", "badgeType": "badge-grammar", "speech_text": "throw away"},
+        {"id": 158, "unit": 11, "phrase": "cut down ~", "prep": "down", "prefix": "cut", "suffix": "~", "jp": "〜を切り倒す", "ex_en_pre": "I cut", "ex_en_post": "the tree.", "ex_jp": "私はその木を切り倒した。", "note": "伐採する", "badgeType": "badge-grammar", "speech_text": "cut down"},
+        {"id": 159, "unit": 11, "phrase": "pull out ~", "prep": "out", "prefix": "pull", "suffix": "~", "jp": "〜を引き抜く・抜く", "ex_en_pre": "I had my bad tooth pulled", "ex_en_post": ".", "ex_jp": "私は虫歯を抜いてもらった。", "note": "抜歯・引き抜く", "badgeType": "badge-grammar", "speech_text": "pull out"},
+        {"id": 160, "unit": 11, "phrase": "point to ~", "prep": "to", "prefix": "point", "suffix": "~", "jp": "〜を指さす", "ex_en_pre": "He pointed", "ex_en_post": "the door.", "ex_jp": "彼はドアの方を指差した。", "note": "指で示す", "badgeType": "badge-grammar", "speech_text": "point to"},
+        {"id": 161, "unit": 11, "phrase": "stay at ~", "prep": "at", "prefix": "stay", "suffix": "~", "jp": "(ホテル・家に)滞在する・泊まる", "ex_en_pre": "I stayed", "ex_en_post": "his house yesterday.", "ex_jp": "私は昨日彼の家に泊まった。", "note": "施設・場所に滞在", "badgeType": "badge-grammar", "speech_text": "stay at"},
+        {"id": 162, "unit": 11, "phrase": "stay with ~", "prep": "with", "prefix": "stay", "suffix": "~", "jp": "(人の家に)滞在する・泊まる", "ex_en_pre": "I will stay", "ex_en_post": "my aunt tomorrow.", "ex_jp": "私は明日おばの家に泊まるだろう。", "note": "人宅に泊まる", "badgeType": "badge-grammar", "speech_text": "stay with"},
+        {"id": 163, "unit": 11, "phrase": "suffer from ~", "prep": "from", "prefix": "suffer", "suffix": "~", "jp": "〜(病気・痛むこと)で苦しむ", "ex_en_pre": "Tom is suffering", "ex_en_post": "headache.", "ex_jp": "トムは頭痛で悩んでいる。", "note": "病気で悩む", "badgeType": "badge-caution", "speech_text": "suffer from"},
+        {"id": 164, "unit": 11, "phrase": "take in ~", "prep": "in", "prefix": "take", "suffix": "~", "jp": "〜を取り入れる・吸収する", "ex_en_pre": "Forests take", "ex_en_post": "CO2.", "ex_jp": "森林は二酸化炭素を吸収する。", "note": "吸収・摂取", "badgeType": "badge-grammar", "speech_text": "take in"},
+        {"id": 165, "unit": 11, "phrase": "take A to B", "prep": "to", "prefix": "take us", "suffix": "the park", "jp": "AをBへ連れて行く", "ex_en_pre": "My father took us", "ex_en_post": "the park.", "ex_jp": "父は私達を公園に連れて行った。", "note": "人を連れて行く", "badgeType": "badge-grammar", "speech_text": "take A to B"},
+        {"id": 166, "unit": 12, "phrase": "want A to ~", "prep": "to", "prefix": "want you", "suffix": "come with me", "jp": "Aに〜してもらいたい", "ex_en_pre": "I want you", "ex_en_post": "come with me.", "ex_jp": "私と一緒にあなたに来てもらいたい。", "note": "want ＋ 人 ＋ to V", "badgeType": "badge-grammar", "speech_text": "want someone to"},
+        {"id": 167, "unit": 12, "phrase": "tell A to ~", "prep": "to", "prefix": "tell me", "suffix": "open the door", "jp": "Aに〜するように言う", "ex_en_pre": "He told me", "ex_en_post": "open the door.", "ex_jp": "彼は戸を開けるように私に言った。", "note": "tell ＋ 人 ＋ to V", "badgeType": "badge-grammar", "speech_text": "tell someone to"},
+        {"id": 168, "unit": 12, "phrase": "That's right", "prep": "right", "prefix": "That's", "suffix": "", "jp": "そのとおりです", "ex_en_pre": "We must help him. That's", "ex_en_post": ".", "ex_jp": "彼を助けねばならない。その通りだ。", "note": "同意の返答", "badgeType": "badge-grammar", "speech_text": "That is right"},
+        {"id": 169, "unit": 12, "phrase": "That's too bad", "prep": "bad", "prefix": "That's too", "suffix": "", "jp": "それはいけませんね・気の毒に", "ex_en_pre": "I feel sick. That's too", "ex_en_post": ".", "ex_jp": "私は気分が悪い。それはお気の毒です。", "note": "同情の返答", "badgeType": "badge-grammar", "speech_text": "That is too bad"},
+        {"id": 170, "unit": 12, "phrase": "They say that ~", "prep": "say", "prefix": "They", "suffix": "he is going abroad.", "jp": "〜だそうです・噂されている", "ex_en_pre": "They", "ex_en_post": "he is going abroad.", "ex_jp": "彼は外国へ行くそうです。", "note": "伝聞表現", "badgeType": "badge-grammar", "speech_text": "They say that"},
+        {"id": 171, "unit": 12, "phrase": "too ... to ~", "prep": "to", "prefix": "too difficult", "suffix": "read", "jp": "非常に...なので〜できない", "ex_en_pre": "This book is too difficult", "ex_en_post": "read.", "ex_jp": "この本は読むには難しすぎる。", "note": "so ... that cannot", "badgeType": "badge-caution", "speech_text": "too difficult to read"},
+        {"id": 172, "unit": 12, "phrase": "What do you mean ?", "prep": "mean", "prefix": "What do you", "suffix": "?", "jp": "どういう意味ですか", "ex_en_pre": "What do you", "ex_en_post": "by that?", "ex_jp": "それはどういう意味ですか。", "note": "意図の確認", "badgeType": "badge-grammar", "speech_text": "What do you mean"},
+        {"id": 173, "unit": 12, "phrase": "Why not ?", "prep": "not", "prefix": "Why", "suffix": "?", "jp": "もちろんだよ・ぜひやろう", "ex_en_pre": "Let's play tennis. Why", "ex_en_post": "?", "ex_jp": "テニスをやろう。いいとも。", "note": "提案に大賛成する", "badgeType": "badge-grammar", "speech_text": "Why not"},
+        {"id": 174, "unit": 12, "phrase": "with a smile", "prep": "smile", "prefix": "with a", "suffix": "", "jp": "ほほえみながら・笑顔で", "ex_en_pre": "She came in with a", "ex_en_post": ".", "ex_jp": "彼女はほほえみながら入ってきた。", "note": "態様を表すwith", "badgeType": "badge-grammar", "speech_text": "with a smile"},
+        {"id": 175, "unit": 12, "phrase": "without -ing", "prep": "-ing", "prefix": "without", "suffix": "", "jp": "〜しないで", "ex_en_pre": "He went out without eating", "ex_en_post": "breakfast.", "ex_jp": "彼は朝食を食べずに出かけた。", "note": "without ＋ 動名詞", "badgeType": "badge-caution", "speech_text": "without eating"},
+        {"id": 176, "unit": 12, "phrase": "write to ~", "prep": "to", "prefix": "write", "suffix": "~", "jp": "〜に手紙を書く", "ex_en_pre": "Please write", "ex_en_post": "me.", "ex_jp": "どうぞ私に手紙を書いて下さい。", "note": "手紙を送る", "badgeType": "badge-grammar", "speech_text": "write to"},
+        {"id": 177, "unit": 12, "phrase": "You are welcome", "prep": "welcome", "prefix": "You are", "suffix": ".", "jp": "どういたしまして", "ex_en_pre": "Thank you. You are", "ex_en_post": ".", "ex_jp": "『ありがとう。』『どういたしまして。』", "note": "お礼への返答", "badgeType": "badge-grammar", "speech_text": "You are welcome"},
+        {"id": 178, "unit": 12, "phrase": "You know", "prep": "know", "prefix": "You", "suffix": "", "jp": "ねえ・あのう(会話のつなぎ)", "ex_en_pre": "You", "ex_en_post": ", I can't go today.", "ex_jp": "あのう。今日は私は行けないんです。", "note": "会話を滑らかにする", "badgeType": "badge-grammar", "speech_text": "You know"},
+        {"id": 179, "unit": 12, "phrase": "You see", "prep": "see", "prefix": "You", "suffix": "", "jp": "えっと・いいですか(説明)", "ex_en_pre": "You", "ex_en_post": ", I was not twenty then.", "ex_jp": "えっと、当時私は20歳でなかった。", "note": "事情を説明する", "badgeType": "badge-grammar", "speech_text": "You see"},
+        {"id": 180, "unit": 12, "phrase": "so that ... can ~", "prep": "can", "prefix": "so that she", "suffix": "sleep", "jp": "･･･が〜できるように(目的)", "ex_en_pre": "Be quiet so that she", "ex_en_post": "sleep.", "ex_jp": "彼女が眠れるように静かにしなさい。", "note": "目的を表す接続詞", "badgeType": "badge-caution", "speech_text": "so that she can sleep"},
+        {"id": 181, "unit": 13, "phrase": "right now", "prep": "now", "prefix": "right", "suffix": "", "jp": "今すぐに", "ex_en_pre": "Do it right", "ex_en_post": ".", "ex_jp": "今すぐにそれをしなさい。", "note": "即座の指示", "badgeType": "badge-grammar", "speech_text": "right now"},
+        {"id": 182, "unit": 13, "phrase": "say to oneself", "prep": "oneself", "prefix": "say to", "suffix": "", "jp": "心の中で思う・つぶやく", "ex_en_pre": "He said to", "ex_en_post": ", 'What shall I do?'", "ex_jp": "彼は心で思った『どうしよう』", "note": "再帰代名詞表現", "badgeType": "badge-caution", "speech_text": "say to oneself"},
+        {"id": 183, "unit": 13, "phrase": "See you.", "prep": "you", "prefix": "See", "suffix": ".", "jp": "ではまた(挨拶)", "ex_en_pre": "See", "ex_en_post": "next Friday.", "ex_jp": "次の金曜日にまた言いましょう。", "note": "別れの挨拶", "badgeType": "badge-grammar", "speech_text": "See you"},
+        {"id": 184, "unit": 13, "phrase": "send for ~", "prep": "for", "prefix": "send", "suffix": "~", "jp": "〜を呼びにやる", "ex_en_pre": "Send", "ex_en_post": "the doctor, please.", "ex_jp": "どうか医者を呼びにやって下さい。", "note": "手配・呼び出し", "badgeType": "badge-grammar", "speech_text": "send for"},
+        {"id": 185, "unit": 13, "phrase": "Shall we ~ ?", "prep": "Shall", "prefix": "", "suffix": "we ~ ?", "jp": "〜しませんか(勧誘)", "ex_en_pre": "", "ex_en_post": "we play some games?", "ex_jp": "なにかゲームをしませんか。", "note": "一緒に行う勧誘", "badgeType": "badge-grammar", "speech_text": "Shall we play some games"},
+        {"id": 186, "unit": 13, "phrase": "sit down", "prep": "down", "prefix": "sit", "suffix": "", "jp": "腰をおろす・座る", "ex_en_pre": "Let's sit", "ex_en_post": "on that bench.", "ex_jp": "あのベンチに座ろう。", "note": "着席の動作", "badgeType": "badge-grammar", "speech_text": "sit down"},
+        {"id": 187, "unit": 13, "phrase": "some day", "prep": "day", "prefix": "some", "suffix": "", "jp": "いつの日か・いつか", "ex_en_pre": "Some", "ex_en_post": "you'll be a good doctor.", "ex_jp": "いつか君はいい医者になるだろう。", "note": "未来のある日", "badgeType": "badge-grammar", "speech_text": "some day"},
+        {"id": 188, "unit": 13, "phrase": "so that ... can ~", "prep": "can", "prefix": "so that she", "suffix": "sleep", "jp": "･･･が〜できるように", "ex_en_pre": "Be quiet so that she", "ex_en_post": "sleep.", "ex_jp": "彼女が眠れるように静かにしなさい。", "note": "目的を表す接続詞句", "badgeType": "badge-caution", "speech_text": "so that she can sleep"},
+        {"id": 189, "unit": 13, "phrase": "so ~ that ...", "prep": "that", "prefix": "so cold", "suffix": "we can't go out", "jp": "とても〜なので･･･だ", "ex_en_pre": "It is so cold", "ex_en_post": "we can't go out.", "ex_jp": "とても寒いので外出できない。", "note": "程度・結果の構文", "badgeType": "badge-caution", "speech_text": "so cold that"},
+        {"id": 190, "unit": 13, "phrase": "stay with ~", "prep": "with", "prefix": "stay", "suffix": "~", "jp": "〜の家に泊まる", "ex_en_pre": "I will stay", "ex_en_post": "my aunt tomorrow.", "ex_jp": "私は明日おばの家に泊まるだろう。", "note": "人宅への滞在", "badgeType": "badge-grammar", "speech_text": "stay with"},
+        {"id": 191, "unit": 13, "phrase": "stay at ~", "prep": "at", "prefix": "stay", "suffix": "~", "jp": "〜に泊まる", "ex_en_pre": "I stayed", "ex_en_post": "his house yesterday.", "ex_jp": "私は昨日彼の家に泊まった。", "note": "場所・施設への滞在", "badgeType": "badge-grammar", "speech_text": "stay at"},
+        {"id": 192, "unit": 13, "phrase": "stand up", "prep": "up", "prefix": "stand", "suffix": "", "jp": "立つ・立ち上がる", "ex_en_pre": "He stood", "ex_en_post": "and answered it.", "ex_jp": "彼は立ち上がって手に答えた。", "note": "起立動作", "badgeType": "badge-grammar", "speech_text": "stand up"},
+        {"id": 193, "unit": 13, "phrase": "stop -ing", "prep": "-ing", "prefix": "stop", "suffix": "", "jp": "〜をやめる", "ex_en_pre": "Stop talking", "ex_en_post": "!", "ex_jp": "おしゃべりはやめなさい！", "note": "動名詞目的語", "badgeType": "badge-caution", "speech_text": "stop talking"},
+        {"id": 194, "unit": 13, "phrase": "such as ~", "prep": "as", "prefix": "such", "suffix": "~", "jp": "〜のような", "ex_en_pre": "I like a book such", "ex_en_post": "this.", "ex_jp": "私はこのような本が好きです。", "note": "具体例の提示", "badgeType": "badge-grammar", "speech_text": "such as"},
+        {"id": 195, "unit": 13, "phrase": "suffer from ~", "prep": "from", "prefix": "suffer", "suffix": "~", "jp": "〜で苦しむ・悩む", "ex_en_pre": "Tom is suffering", "ex_en_post": "headache.", "ex_jp": "トムは頭痛で悩んでいる。", "note": "病気・痛みの原因", "badgeType": "badge-caution", "speech_text": "suffer from"},
+        {"id": 196, "unit": 14, "phrase": "tell A to ~", "prep": "to", "prefix": "tell me", "suffix": "open the door", "jp": "Aに〜するよう言う", "ex_en_pre": "He told me", "ex_en_post": "open the door.", "ex_jp": "彼は戸を開けるように私に言った。", "note": "tell ＋ 人 ＋ to V", "badgeType": "badge-grammar", "speech_text": "tell someone to"},
+        {"id": 197, "unit": 14, "phrase": "think of ~", "prep": "of", "prefix": "think", "suffix": "~", "jp": "〜を思いつく", "ex_en_pre": "I thought", "ex_en_post": "a good idea.", "ex_jp": "私はよい考えを思いついた。", "note": "アイディア創出", "badgeType": "badge-caution", "speech_text": "think of"},
+        {"id": 198, "unit": 14, "phrase": "think about ~", "prep": "about", "prefix": "think", "suffix": "~", "jp": "〜について考える", "ex_en_pre": "I was thinking", "ex_en_post": "the future.", "ex_jp": "私は将来について考えていた。", "note": "思案・検討", "badgeType": "badge-grammar", "speech_text": "think about"},
+        {"id": 199, "unit": 14, "phrase": "thank A for B", "prep": "for", "prefix": "thank you", "suffix": "your help", "jp": "AにBを感謝する", "ex_en_pre": "Thank you", "ex_en_post": "your help.", "ex_jp": "助けていただいて感謝します。", "note": "感謝理由のfor", "badgeType": "badge-grammar", "speech_text": "thank someone for"},
+        {"id": 200, "unit": 14, "phrase": "thanks to ~", "prep": "to", "prefix": "thanks", "suffix": "~", "jp": "〜のおかげで", "ex_en_pre": "Thanks", "ex_en_post": "you, I could do it.", "ex_jp": "君のおかげで、私はそれができた。", "note": "感謝・原因のto", "badgeType": "badge-caution", "speech_text": "thanks to"},
+        {"id": 201, "unit": 14, "phrase": "That's too bad.", "prep": "bad", "prefix": "That's too", "suffix": ".", "jp": "それはいけませんね", "ex_en_pre": "I feel sick. That's too", "ex_en_post": ".", "ex_jp": "私は気分が悪い。それはお気の毒です。", "note": "同情の返答", "badgeType": "badge-grammar", "speech_text": "That is too bad"},
+        {"id": 202, "unit": 14, "phrase": "That's right.", "prep": "right", "prefix": "That's", "suffix": ".", "jp": "そのとおりです", "ex_en_pre": "We must help him. That's", "ex_en_post": ".", "ex_jp": "彼を助けねばならない。その通りだ。", "note": "強い同意", "badgeType": "badge-grammar", "speech_text": "That is right"},
+        {"id": 203, "unit": 14, "phrase": "the other day", "prep": "other", "prefix": "the", "suffix": "day", "jp": "先日・この間", "ex_en_pre": "I bought this book the", "ex_en_post": "day.", "ex_jp": "私は先日この本を買った。", "note": "過去の特定日", "badgeType": "badge-grammar", "speech_text": "the other day"},
+        {"id": 204, "unit": 14, "phrase": "The number of ~", "prep": "number", "prefix": "The", "suffix": "of boys", "jp": "〜の数(単数扱い)", "ex_en_pre": "The", "ex_en_post": "of boys was three.", "ex_jp": "少年の数は3人だった。", "note": "was / is 単数受", "badgeType": "badge-caution", "speech_text": "The number of"},
+        {"id": 205, "unit": 14, "phrase": "the next day", "prep": "next", "prefix": "the", "suffix": "day", "jp": "その翌日", "ex_en_pre": "They left Tokyo the", "ex_en_post": "day.", "ex_jp": "彼らは翌日東京をたった。", "note": "翌日の表現", "badgeType": "badge-grammar", "speech_text": "the next day"},
+        {"id": 206, "unit": 14, "phrase": "They say that ~", "prep": "say", "prefix": "They", "suffix": "he is going abroad.", "jp": "〜だそうです", "ex_en_pre": "They", "ex_en_post": "he is going abroad.", "ex_jp": "彼は外国へ行くそうです。", "note": "噂・伝聞表現", "badgeType": "badge-grammar", "speech_text": "They say that"},
+        {"id": 207, "unit": 14, "phrase": "thousands of ~", "prep": "thousands", "prefix": "", "suffix": "of stars", "jp": "何千もの〜", "ex_en_pre": "There are", "ex_en_post": "of stars in the sky.", "ex_jp": "空には何千もの星がある。", "note": "複数形のs必須", "badgeType": "badge-caution", "speech_text": "thousands of"},
+        {"id": 208, "unit": 14, "phrase": "this time", "prep": "time", "prefix": "this", "suffix": "", "jp": "今度は・今回は", "ex_en_pre": "I will go this", "ex_en_post": ".", "ex_jp": "今度は私が行きます。", "note": "今回・今度", "badgeType": "badge-grammar", "speech_text": "this time"},
+        {"id": 209, "unit": 14, "phrase": "This way", "prep": "way", "prefix": "This", "suffix": "", "jp": "この方法で・こちらへ", "ex_en_pre": "Do it this", "ex_en_post": ".", "ex_jp": "こういうふうにやりなさい。", "note": "やり方・案内", "badgeType": "badge-grammar", "speech_text": "This way"},
+        {"id": 210, "unit": 14, "phrase": "throw away ~", "prep": "away", "prefix": "throw", "suffix": "~", "jp": "〜を投げ捨てる", "ex_en_pre": "Don't throw", "ex_en_post": "an empty can.", "ex_jp": "空き缶を投げ捨ててはいけません。", "note": "廃棄の動作", "badgeType": "badge-grammar", "speech_text": "throw away"},
+        {"id": 211, "unit": 15, "phrase": "too ~ to ...", "prep": "to", "prefix": "too difficult", "suffix": "read", "jp": "･･･するには〜すぎる", "ex_en_pre": "This book is too difficult", "ex_en_post": "read.", "ex_jp": "この本は読むには難しすぎる。", "note": "so ~ that cannot", "badgeType": "badge-caution", "speech_text": "too difficult to read"},
+        {"id": 212, "unit": 15, "phrase": "turn down ~", "prep": "down", "prefix": "turn", "suffix": "~", "jp": "(音量を)小さくする", "ex_en_pre": "She turned", "ex_en_post": "the radio.", "ex_jp": "彼女はラジオの音を小さくした。", "note": "音量・温度を下げる", "badgeType": "badge-grammar", "speech_text": "turn down"},
+        {"id": 213, "unit": 15, "phrase": "turn off ~", "prep": "off", "prefix": "turn", "suffix": "~", "jp": "(明かりなどを)消す", "ex_en_pre": "She turned", "ex_en_post": "the radio.", "ex_jp": "彼女はラジオを消した。", "note": "スイッチを切る", "badgeType": "badge-grammar", "speech_text": "turn off"},
+        {"id": 214, "unit": 15, "phrase": "turn on ~", "prep": "on", "prefix": "turn", "suffix": "~", "jp": "(明かりなどを)つける", "ex_en_pre": "Turn", "ex_en_post": "the light.", "ex_jp": "明かりをつけなさい。", "note": "スイッチを入れる", "badgeType": "badge-grammar", "speech_text": "turn on"},
+        {"id": 215, "unit": 15, "phrase": "wake up", "prep": "up", "prefix": "wake", "suffix": "", "jp": "目が覚める", "ex_en_pre": "I woke", "ex_en_post": "at seven.", "ex_jp": "私は7時に目が覚めた。", "note": "覚醒動作(過去:woke)", "badgeType": "badge-grammar", "speech_text": "wake up"},
+        {"id": 216, "unit": 15, "phrase": "walk around", "prep": "around", "prefix": "walk", "suffix": "", "jp": "あちこち歩き回る", "ex_en_pre": "He walked", "ex_en_post": ".", "ex_jp": "彼はあちこち歩き回った。", "note": "散策動作", "badgeType": "badge-grammar", "speech_text": "walk around"},
+        {"id": 217, "unit": 15, "phrase": "want A to ~", "prep": "to", "prefix": "want you", "suffix": "come with me", "jp": "Aに〜してもらいたい", "ex_en_pre": "I want you", "ex_en_post": "come with me.", "ex_jp": "私と一緒にあなたに来てもらいたい。", "note": "want ＋ 人 ＋ to V", "badgeType": "badge-grammar", "speech_text": "want someone to"},
+        {"id": 218, "unit": 15, "phrase": "What's up ?", "prep": "up", "prefix": "What's", "suffix": "?", "jp": "どうしたの", "ex_en_pre": "What's", "ex_en_post": "? Nothing.", "ex_jp": "何があったのですか。いいえなにも。", "note": "日常対話句", "badgeType": "badge-grammar", "speech_text": "What is up"},
+        {"id": 219, "unit": 15, "phrase": "What's wrong ?", "prep": "wrong", "prefix": "What's", "suffix": "with him?", "jp": "どこか悪いのですか", "ex_en_pre": "What's", "ex_en_post": "with him?", "ex_jp": "彼はどこか具合が悪いのですか。", "note": "トラブル・体調確認", "badgeType": "badge-caution", "speech_text": "What is wrong"},
+        {"id": 220, "unit": 15, "phrase": "Why don't you ~ ?", "prep": "you", "prefix": "Why don't", "suffix": "come to my home?", "jp": "〜しませんか", "ex_en_pre": "Why don't", "ex_en_post": "come to my home?", "ex_jp": "私の家に来ませんか。", "note": "提案・勧誘", "badgeType": "badge-caution", "speech_text": "Why don't you"},
+        {"id": 221, "unit": 15, "phrase": "with a smile", "prep": "smile", "prefix": "with a", "suffix": "", "jp": "ほほえみながら", "ex_en_pre": "She came in with a", "ex_en_post": ".", "ex_jp": "彼女はほほえみながら入ってきた。", "note": "表情・態様を表す", "badgeType": "badge-grammar", "speech_text": "with a smile"},
+        {"id": 222, "unit": 15, "phrase": "without -ing", "prep": "-ing", "prefix": "without", "suffix": "", "jp": "〜しないで", "ex_en_pre": "He went out without eating", "ex_en_post": "breakfast.", "ex_jp": "彼は朝食を食べずに出かけた。", "note": "without ＋ 動名詞", "badgeType": "badge-caution", "speech_text": "without eating"},
+        {"id": 223, "unit": 15, "phrase": "would like to ~", "prep": "like", "prefix": "would", "suffix": "to go swimming.", "jp": "〜したいと思う", "ex_en_pre": "I'd", "ex_en_post": "to go swimming.", "ex_jp": "私は泳ぎに行きたいです。", "note": "want to の丁寧語", "badgeType": "badge-synonym", "speech_text": "would like to"},
+        {"id": 224, "unit": 15, "phrase": "write to ~", "prep": "to", "prefix": "write", "suffix": "~", "jp": "〜に手紙を書く", "ex_en_pre": "Please write", "ex_en_post": "me.", "ex_jp": "どうぞ私に手紙を書いて下さい。", "note": "通信・手紙", "badgeType": "badge-grammar", "speech_text": "write to"},
+        {"id": 225, "unit": 15, "phrase": "years old", "prep": "years", "prefix": "~", "suffix": "old", "jp": "〜歳", "ex_en_pre": "I am fifteen", "ex_en_post": "old.", "ex_jp": "私は15歳です。", "note": "年齢表現", "badgeType": "badge-grammar", "speech_text": "fifteen years old"},
+
+        // UNIT 16〜20 追加分 (226〜300)
+        {"id": 226, "unit": 16, "phrase": "and so on", "prep": "on", "prefix": "and so", "suffix": "", "jp": "〜など", "ex_en_pre": "I like cakes, cookies and so", "ex_en_post": ".", "ex_jp": "私はケーキ、クッキーなどが好きです。", "note": "列挙の締めくくり", "badgeType": "badge-grammar", "speech_text": "and so on"},
+        {"id": 227, "unit": 16, "phrase": "cup (glass) of ~", "prep": "of", "prefix": "a cup", "suffix": "~", "jp": "コップ(グラス)一杯の〜", "ex_en_pre": "I want a cup", "ex_en_post": "milk.", "ex_jp": "私は一杯のミルクがほしい。", "note": "容器の単位", "badgeType": "badge-grammar", "speech_text": "a cup of"},
+        {"id": 228, "unit": 16, "phrase": "a few ~", "prep": "few", "prefix": "a", "suffix": "~", "jp": "少しの〜(数えられる名詞)", "ex_en_pre": "He has a", "ex_en_post": "books.", "ex_jp": "彼は数冊の本を持っています。", "note": "複数形名詞を伴う", "badgeType": "badge-caution", "speech_text": "a few"},
+        {"id": 229, "unit": 16, "phrase": "a little ~", "prep": "little", "prefix": "a", "suffix": "~", "jp": "少しの〜(量)", "ex_en_pre": "I have a", "ex_en_post": "money.", "ex_jp": "私は少しのお金を持っています。", "note": "不可算名詞を伴う", "badgeType": "badge-caution", "speech_text": "a little"},
+        {"id": 230, "unit": 16, "phrase": "a lot / a lot of ~", "prep": "lot", "prefix": "a", "suffix": "of ~", "jp": "たくさん / たくさんの〜", "ex_en_pre": "I know a", "ex_en_post": "about flowers.", "ex_jp": "私は花についてたくさん知っています。", "note": "副詞句・形容詞句", "badgeType": "badge-synonym", "speech_text": "a lot of"},
+        {"id": 231, "unit": 16, "phrase": "a pair of ~", "prep": "pair", "prefix": "a", "suffix": "of ~", "jp": "一対(1足)の〜", "ex_en_pre": "My father gave me a", "ex_en_post": "of shoes.", "ex_jp": "父が私に一対のくつをくれた。", "note": "ペアで使う物", "badgeType": "badge-grammar", "speech_text": "a pair of"},
+        {"id": 232, "unit": 16, "phrase": "a part of ~", "prep": "part", "prefix": "a", "suffix": "of ~", "jp": "〜の一部", "ex_en_pre": "A", "ex_en_post": "of the class is singing.", "ex_jp": "クラスの一部が歌っています。", "note": "部分を表す", "badgeType": "badge-grammar", "speech_text": "a part of"},
+        {"id": 233, "unit": 16, "phrase": "a piece of ~", "prep": "piece", "prefix": "a", "suffix": "of ~", "jp": "1片(一切れ)の〜", "ex_en_pre": "Give me a", "ex_en_post": "of cake.", "ex_jp": "一切れのケーキをください。", "note": "単位を表す", "badgeType": "badge-grammar", "speech_text": "a piece of"},
+        {"id": 234, "unit": 16, "phrase": "a kind of ~", "prep": "kind", "prefix": "a", "suffix": "of ~", "jp": "〜の一種", "ex_en_pre": "Sumo is a", "ex_en_post": "of wrestling.", "ex_jp": "相撲はレスリングの一種です。", "note": "分類を表す", "badgeType": "badge-grammar", "speech_text": "a kind of"},
+        {"id": 235, "unit": 16, "phrase": "after all", "prep": "all", "prefix": "after", "suffix": "", "jp": "結局・やはり", "ex_en_pre": "He did not come after", "ex_en_post": ".", "ex_jp": "彼は結局来なかった。", "note": "結末の強調", "badgeType": "badge-grammar", "speech_text": "after all"},
+        {"id": 236, "unit": 16, "phrase": "after a while", "prep": "while", "prefix": "after a", "suffix": "", "jp": "しばらくして", "ex_en_pre": "They came back after a", "ex_en_post": ".", "ex_jp": "彼らはしばらくして帰ってきた。", "note": "時間の経過", "badgeType": "badge-grammar", "speech_text": "after a while"},
+        {"id": 237, "unit": 16, "phrase": "after school", "prep": "school", "prefix": "after", "suffix": "", "jp": "放課後", "ex_en_pre": "Let's play tennis after", "ex_en_post": ".", "ex_jp": "放課後テニスをしよう。", "note": "日常表現", "badgeType": "badge-grammar", "speech_text": "after school"},
+        {"id": 238, "unit": 16, "phrase": "again and again", "prep": "again", "prefix": "again and", "suffix": "", "jp": "何度も・繰り返し", "ex_en_pre": "I went there again and", "ex_en_post": ".", "ex_jp": "私は何度もそこへ行った。", "note": "反復を表す", "badgeType": "badge-grammar", "speech_text": "again and again"},
+        {"id": 239, "unit": 16, "phrase": "agree with ~", "prep": "with", "prefix": "agree", "suffix": "~", "jp": "〜に同意する", "ex_en_pre": "I agree", "ex_en_post": "you.", "ex_jp": "私はあなたと同意見です。", "note": "人に同意するwith", "badgeType": "badge-caution", "speech_text": "agree with"},
+        {"id": 240, "unit": 16, "phrase": "all day / night", "prep": "day", "prefix": "all", "suffix": "", "jp": "一日中 / 一晩中", "ex_en_pre": "I was sick in bed all", "ex_en_post": "yesterday.", "ex_jp": "私は昨日は一日中寝ていた。", "note": "全体の期間", "badgeType": "badge-grammar", "speech_text": "all day"},
+
+        {"id": 241, "unit": 17, "phrase": "all over ~", "prep": "over", "prefix": "all", "suffix": "~", "jp": "〜中で・至る所で", "ex_en_pre": "He is known all", "ex_en_post": "the world.", "ex_jp": "彼は世界中で知られている。", "note": "広がりを表すover", "badgeType": "badge-grammar", "speech_text": "all over"},
+        {"id": 242, "unit": 17, "phrase": "all right", "prep": "right", "prefix": "all", "suffix": "", "jp": "よろしい・元気で", "ex_en_pre": "Are you all", "ex_en_post": "today?", "ex_jp": "今日は具合は良いですか。", "note": "状態・挨拶", "badgeType": "badge-grammar", "speech_text": "all right"},
+        {"id": 243, "unit": 17, "phrase": "all the time", "prep": "time", "prefix": "all the", "suffix": "", "jp": "その間ずっと・常に", "ex_en_pre": "He was at home all the", "ex_en_post": ".", "ex_jp": "彼はその間ずっと家にいた。", "note": "継続を表す", "badgeType": "badge-grammar", "speech_text": "all the time"},
+        {"id": 244, "unit": 17, "phrase": "around the world", "prep": "around", "prefix": "", "suffix": "the world", "jp": "世界中を・世界中の", "ex_en_pre": "I traveled", "ex_en_post": "the world.", "ex_jp": "私は世界中を旅行した。", "note": "周遊のaround", "badgeType": "badge-synonym", "speech_text": "around the world"},
+        {"id": 245, "unit": 17, "phrase": "arrive at ~", "prep": "at", "prefix": "arrive", "suffix": "~", "jp": "〜に到着する", "ex_en_pre": "He arrived", "ex_en_post": "the station at eight.", "ex_jp": "彼は8時に駅に着いた。", "note": "地点のat", "badgeType": "badge-caution", "speech_text": "arrive at"},
+        {"id": 246, "unit": 17, "phrase": "as ... as ~", "prep": "as", "prefix": "as ...", "suffix": "~", "jp": "〜と同じくらい...", "ex_en_pre": "He is as tall", "ex_en_post": "I.", "ex_jp": "彼は私と同じくらいの背の高さだ。", "note": "原級比較", "badgeType": "badge-grammar", "speech_text": "as tall as"},
+        {"id": 247, "unit": 17, "phrase": "as ~ as one can", "prep": "can", "prefix": "as ~ as you", "suffix": "", "jp": "できるだけ〜", "ex_en_pre": "Come as soon as you", "ex_en_post": ".", "ex_jp": "できるだけ早く来なさい。", "note": "主語+can", "badgeType": "badge-synonym", "speech_text": "as soon as you can"},
+        {"id": 248, "unit": 17, "phrase": "as ~ as possible", "prep": "possible", "prefix": "as ~ as", "suffix": "", "jp": "できるだけ〜", "ex_en_pre": "He ran as fast as", "ex_en_post": ".", "ex_jp": "彼はできるだけ速く走った。", "note": "書き換え頻出", "badgeType": "badge-caution", "speech_text": "as fast as possible"},
+        {"id": 249, "unit": 17, "phrase": "as soon as ~", "prep": "soon", "prefix": "as", "suffix": "as ~", "jp": "〜するとすぐに", "ex_en_pre": "As", "ex_en_post": "as he went out, she cried.", "ex_jp": "彼が出て行くとすぐに彼女は泣いた。", "note": "即時性", "badgeType": "badge-caution", "speech_text": "as soon as"},
+        {"id": 250, "unit": 17, "phrase": "as usual", "prep": "usual", "prefix": "as", "suffix": "", "jp": "いつものとおり", "ex_en_pre": "He came late as", "ex_en_post": ".", "ex_jp": "彼はいつものとおり遅れて来た。", "note": "相変わらず", "badgeType": "badge-grammar", "speech_text": "as usual"},
+        {"id": 251, "unit": 17, "phrase": "as well as ~", "prep": "well", "prefix": "as", "suffix": "as ~", "jp": "〜と同様に...も", "ex_en_pre": "He likes baseball as", "ex_en_post": "as tennis.", "ex_jp": "彼はテニスと同様に野球も好きです。", "note": "強調順序に注意", "badgeType": "badge-caution", "speech_text": "as well as"},
+        {"id": 252, "unit": 17, "phrase": "ask for ~", "prep": "for", "prefix": "ask", "suffix": "~", "jp": "〜を求める・ねだる", "ex_en_pre": "He asked Mary", "ex_en_post": "help.", "ex_jp": "彼はメアリーに助けを求めた。", "note": "求めるfor", "badgeType": "badge-grammar", "speech_text": "ask for"},
+        {"id": 253, "unit": 17, "phrase": "ask 人 to ~", "prep": "to", "prefix": "ask me", "suffix": "~", "jp": "人に〜するよう頼む", "ex_en_pre": "He asked me", "ex_en_post": "wait.", "ex_jp": "彼は私に待つように頼んだ。", "note": "ask ＋ 人 ＋ to V", "badgeType": "badge-grammar", "speech_text": "ask someone to"},
+        {"id": 254, "unit": 17, "phrase": "at first", "prep": "first", "prefix": "at", "suffix": "", "jp": "最初は", "ex_en_pre": "At", "ex_en_post": "I didn't like him.", "ex_jp": "最初私は彼を好きでなかった。", "note": "文頭表現", "badgeType": "badge-grammar", "speech_text": "at first"},
+        {"id": 255, "unit": 17, "phrase": "at home", "prep": "home", "prefix": "at", "suffix": "", "jp": "家で・在宅で", "ex_en_pre": "Were you at", "ex_en_post": "last night?", "ex_jp": "あなたは昨夜家にいましたか。", "note": "在宅", "badgeType": "badge-grammar", "speech_text": "at home"},
+
+        {"id": 256, "unit": 18, "phrase": "at last", "prep": "last", "prefix": "at", "suffix": "", "jp": "ついに・とうとう", "ex_en_pre": "At", "ex_en_post": "she passed the test.", "ex_jp": "ついに彼女はその試験に合格した。", "note": "最終結果", "badgeType": "badge-synonym", "speech_text": "at last"},
+        {"id": 257, "unit": 18, "phrase": "at once", "prep": "once", "prefix": "at", "suffix": "", "jp": "すぐに・直ちに", "ex_en_pre": "Come here at", "ex_en_post": ".", "ex_jp": "すぐにここに来なさい。", "note": "即座に", "badgeType": "badge-synonym", "speech_text": "at once"},
+        {"id": 258, "unit": 18, "phrase": "at that time", "prep": "that", "prefix": "at", "suffix": "time", "jp": "そのとき(当時)", "ex_en_pre": "I was reading a book at", "ex_en_post": "time.", "ex_jp": "私はその時本を読んでいた。", "note": "過去の時点", "badgeType": "badge-grammar", "speech_text": "at that time"},
+        {"id": 259, "unit": 18, "phrase": "at the age of ~", "prep": "age", "prefix": "at the", "suffix": "of ~", "jp": "〜歳の時に", "ex_en_pre": "He went abroad at the", "ex_en_post": "of twenty.", "ex_jp": "彼は20歳の時に外国へ行った。", "note": "年齢指定", "badgeType": "badge-grammar", "speech_text": "at the age of"},
+        {"id": 260, "unit": 18, "phrase": "at the end of ~", "prep": "end", "prefix": "at the", "suffix": "of ~", "jp": "〜の終わりに / 突き当たりに", "ex_en_pre": "The shop is at the", "ex_en_post": "of this street.", "ex_jp": "その店はこの通りの終わりにある。", "note": "場所・時間の端", "badgeType": "badge-grammar", "speech_text": "at the end of"},
+        {"id": 261, "unit": 18, "phrase": "at the same time", "prep": "same", "prefix": "at the", "suffix": "time", "jp": "同時に", "ex_en_pre": "Let's start at the", "ex_en_post": "time.", "ex_jp": "さあ、同時にはじめよう。", "note": "同時進行", "badgeType": "badge-grammar", "speech_text": "at the same time"},
+        {"id": 262, "unit": 18, "phrase": "away from ~", "prep": "from", "prefix": "away", "suffix": "~", "jp": "〜から離れて", "ex_en_pre": "They stayed away", "ex_en_post": "the place.", "ex_jp": "彼らはその場所に近づかなかった。", "note": "離脱・遠ざかる", "badgeType": "badge-grammar", "speech_text": "away from"},
+        {"id": 263, "unit": 18, "phrase": "be able to ~", "prep": "to", "prefix": "be able", "suffix": "~", "jp": "〜できる", "ex_en_pre": "She is able", "ex_en_post": "swim very fast.", "ex_jp": "彼女はとても速く泳ぐことができる。", "note": "can と同義", "badgeType": "badge-synonym", "speech_text": "be able to"},
+        {"id": 264, "unit": 18, "phrase": "be afraid of ~", "prep": "of", "prefix": "be afraid", "suffix": "~", "jp": "〜を恐れる", "ex_en_pre": "He is afraid", "ex_en_post": "the dog.", "ex_jp": "彼はその犬をこわがっている。", "note": "感情表現", "badgeType": "badge-grammar", "speech_text": "be afraid of"},
+        {"id": 265, "unit": 18, "phrase": "be careful with ~", "prep": "careful", "prefix": "be", "suffix": "with ~", "jp": "〜に気をつけなさい", "ex_en_pre": "Be", "ex_en_post": "with the dog.", "ex_jp": "その犬に気をつけなさい。", "note": "注意の命令文", "badgeType": "badge-caution", "speech_text": "be careful with"},
+        {"id": 266, "unit": 18, "phrase": "be different from ~", "prep": "from", "prefix": "be different", "suffix": "~", "jp": "〜と違う", "ex_en_pre": "My answer is different", "ex_en_post": "yours.", "ex_jp": "私の答はあなたのと違う。", "note": "違いを表す", "badgeType": "badge-caution", "speech_text": "be different from"},
+        {"id": 267, "unit": 18, "phrase": "be from ~", "prep": "from", "prefix": "be", "suffix": "~", "jp": "〜出身だ", "ex_en_pre": "Kevin is", "ex_en_post": "America.", "ex_jp": "ケビンはアメリカ出身です。", "note": "come from 同義", "badgeType": "badge-synonym", "speech_text": "be from"},
+        {"id": 268, "unit": 18, "phrase": "be famous for ~", "prep": "for", "prefix": "be famous", "suffix": "~", "jp": "〜で有名だ", "ex_en_pre": "Shizuoka is famous", "ex_en_post": "its tea.", "ex_jp": "静岡はお茶で有名です。", "note": "特産・名物", "badgeType": "badge-grammar", "speech_text": "be famous for"},
+        {"id": 269, "unit": 18, "phrase": "be full of ~", "prep": "of", "prefix": "be full", "suffix": "~", "jp": "〜でいっぱいだ", "ex_en_pre": "Her eyes were full", "ex_en_post": "tears.", "ex_jp": "彼女の目は涙でいっぱいだった。", "note": "満たされる", "badgeType": "badge-synonym", "speech_text": "be full of"},
+        {"id": 270, "unit": 18, "phrase": "be going to ~", "prep": "to", "prefix": "be going", "suffix": "~", "jp": "〜するつもりだ", "ex_en_pre": "I am going", "ex_en_post": "be a teacher.", "ex_jp": "私は先生になるつもりです。", "note": "意志・予定", "badgeType": "badge-grammar", "speech_text": "be going to"},
+
+        {"id": 271, "unit": 19, "phrase": "be glad to ~", "prep": "to", "prefix": "be glad", "suffix": "~", "jp": "〜してうれしい", "ex_en_pre": "I'm glad", "ex_en_post": "meet you.", "ex_jp": "お会いできてうれしいです。", "note": "感情の原因", "badgeType": "badge-grammar", "speech_text": "be glad to"},
+        {"id": 272, "unit": 19, "phrase": "be good at ~", "prep": "at", "prefix": "be good", "suffix": "~", "jp": "〜が得意だ", "ex_en_pre": "She is good", "ex_en_post": "playing the piano.", "ex_jp": "彼女はピアノを弾くのが上手だ。", "note": "得意・不得意", "badgeType": "badge-caution", "speech_text": "be good at"},
+        {"id": 273, "unit": 19, "phrase": "be in trouble", "prep": "trouble", "prefix": "be in", "suffix": "", "jp": "困っている", "ex_en_pre": "I am in", "ex_en_post": "now.", "ex_jp": "私は今困っている。", "note": "困難な状況", "badgeType": "badge-grammar", "speech_text": "be in trouble"},
+        {"id": 274, "unit": 19, "phrase": "be interested in ~", "prep": "in", "prefix": "be interested", "suffix": "~", "jp": "〜に興味がある", "ex_en_pre": "I'm interested", "ex_en_post": "music.", "ex_jp": "私は音楽に興味があります。", "note": "関心・興味", "badgeType": "badge-grammar", "speech_text": "be interested in"},
+        {"id": 275, "unit": 19, "phrase": "be kind to ~", "prep": "to", "prefix": "be kind", "suffix": "~", "jp": "〜に親切だ", "ex_en_pre": "She was kind", "ex_en_post": "me yesterday.", "ex_jp": "昨日彼女は私に親切だった。", "note": "態度・親切さ", "badgeType": "badge-grammar", "speech_text": "be kind to"},
+        {"id": 276, "unit": 19, "phrase": "be known to ~", "prep": "to", "prefix": "be known", "suffix": "~", "jp": "〜に知られている", "ex_en_pre": "His name is known", "ex_en_post": "everyone.", "ex_jp": "彼の名前はみんなに知られている。", "note": "周知", "badgeType": "badge-caution", "speech_text": "be known to"},
+        {"id": 277, "unit": 19, "phrase": "be late for ~", "prep": "for", "prefix": "be late", "suffix": "~", "jp": "〜に遅れる", "ex_en_pre": "I was late", "ex_en_post": "the class.", "ex_jp": "私は授業に遅れた。", "note": "遅刻", "badgeType": "badge-grammar", "speech_text": "be late for"},
+        {"id": 278, "unit": 19, "phrase": "be made of ~", "prep": "of", "prefix": "be made", "suffix": "~", "jp": "〜でできている(材料)", "ex_en_pre": "This desk is made", "ex_en_post": "wood.", "ex_jp": "この机は木でできている。", "note": "物理的変化", "badgeType": "badge-caution", "speech_text": "be made of"},
+        {"id": 279, "unit": 19, "phrase": "be made from ~", "prep": "from", "prefix": "be made", "suffix": "~", "jp": "〜から作られる(原料)", "ex_en_pre": "Cheese is made", "ex_en_post": "milk.", "ex_jp": "チーズは牛乳から作られる。", "note": "化学的変化", "badgeType": "badge-caution", "speech_text": "be made from"},
+        {"id": 280, "unit": 19, "phrase": "be made up of ~", "prep": "up", "prefix": "be made", "suffix": "of ~", "jp": "〜で成り立っている", "ex_en_pre": "The team is made", "ex_en_post": "of 20 members.", "ex_jp": "そのチームは20人で成り立っている。", "note": "構成要素", "badgeType": "badge-grammar", "speech_text": "be made up of"},
+        {"id": 281, "unit": 19, "phrase": "be ready to ~", "prep": "to", "prefix": "be ready", "suffix": "~", "jp": "〜の準備ができている", "ex_en_pre": "I'm ready", "ex_en_post": "go.", "ex_jp": "私は行く用意ができている。", "note": "準備完了", "badgeType": "badge-synonym", "speech_text": "be ready to"},
+        {"id": 282, "unit": 19, "phrase": "be sorry that ~", "prep": "sorry", "prefix": "I'm", "suffix": "that ~", "jp": "〜を気の毒に思う", "ex_en_pre": "I'm", "ex_en_post": "that they lost the game.", "ex_jp": "彼らが試合に負けたことは気の毒だ。", "note": "同情・遺憾", "badgeType": "badge-grammar", "speech_text": "be sorry that"},
+        {"id": 283, "unit": 19, "phrase": "be sure that ~", "prep": "sure", "prefix": "I am", "suffix": "that ~", "jp": "〜を確信する", "ex_en_pre": "I am", "ex_en_post": "that he will come.", "ex_jp": "彼が来ると私は確信している。", "note": "確信のthat", "badgeType": "badge-grammar", "speech_text": "be sure that"},
+        {"id": 284, "unit": 19, "phrase": "be surprised at ~", "prep": "at", "prefix": "be surprised", "suffix": "~", "jp": "〜に驚く", "ex_en_pre": "I was surprised", "ex_en_post": "the news.", "ex_jp": "私はその知らせに驚いた。", "note": "驚きのat", "badgeType": "badge-caution", "speech_text": "be surprised at"},
+        {"id": 285, "unit": 19, "phrase": "be sick in bed", "prep": "sick", "prefix": "be", "suffix": "in bed", "jp": "病気で寝ている", "ex_en_pre": "My brother is", "ex_en_post": "in bed.", "ex_jp": "兄は病気で寝ています。", "note": "闘病・就床", "badgeType": "badge-grammar", "speech_text": "be sick in bed"},
+
+        {"id": 286, "unit": 20, "phrase": "be worried about ~", "prep": "about", "prefix": "be worried", "suffix": "~", "jp": "〜を心配する", "ex_en_pre": "He is worried", "ex_en_post": "his daughter.", "ex_jp": "彼は娘のことを心配している。", "note": "懸念・心配", "badgeType": "badge-grammar", "speech_text": "be worried about"},
+        {"id": 287, "unit": 20, "phrase": "because of ~", "prep": "of", "prefix": "because", "suffix": "~", "jp": "〜のために・〜が原因で", "ex_en_pre": "I did not go because", "ex_en_post": "the rain.", "ex_jp": "私は雨のために行かなかった。", "note": "名詞を伴う理由", "badgeType": "badge-caution", "speech_text": "because of"},
+        {"id": 288, "unit": 20, "phrase": "before noon", "prep": "noon", "prefix": "before", "suffix": "", "jp": "正午前", "ex_en_pre": "Ken had lunch before", "ex_en_post": ".", "ex_jp": "健は正午前に昼食をとった。", "note": "午前中", "badgeType": "badge-grammar", "speech_text": "before noon"},
+        {"id": 289, "unit": 20, "phrase": "before long", "prep": "long", "prefix": "before", "suffix": "", "jp": "まもなく", "ex_en_pre": "He will be back before", "ex_en_post": ".", "ex_jp": "彼はまもなく戻るでしょう。", "note": "soon と同義", "badgeType": "badge-synonym", "speech_text": "before long"},
+        {"id": 290, "unit": 20, "phrase": "between A and B", "prep": "and", "prefix": "between A", "suffix": "B", "jp": "AとBの間に", "ex_en_pre": "I sat between Ken", "ex_en_post": "Bob.", "ex_jp": "私はケンとボブの間に座った。", "note": "二者の間", "badgeType": "badge-grammar", "speech_text": "between A and B"},
+        {"id": 291, "unit": 20, "phrase": "better than ~", "prep": "than", "prefix": "better", "suffix": "~", "jp": "〜よりよく...", "ex_en_pre": "She plays the piano better", "ex_en_post": "he.", "ex_jp": "彼女は彼より上手にピアノを弾く。", "note": "比較級", "badgeType": "badge-grammar", "speech_text": "better than"},
+        {"id": 292, "unit": 20, "phrase": "both A and B", "prep": "and", "prefix": "both A", "suffix": "B", "jp": "AもBも両方とも", "ex_en_pre": "Both he", "ex_en_post": "she are healthy.", "ex_jp": "彼も彼女も共に健康です。", "note": "両方指定", "badgeType": "badge-caution", "speech_text": "both A and B"},
+        {"id": 293, "unit": 20, "phrase": "by oneself", "prep": "oneself", "prefix": "by", "suffix": "", "jp": "独力で・自分で", "ex_en_pre": "He went there by", "ex_en_post": ".", "ex_jp": "彼は独力でそこへ行った。", "note": "一人で", "badgeType": "badge-grammar", "speech_text": "by oneself"},
+        {"id": 294, "unit": 20, "phrase": "by the way", "prep": "way", "prefix": "by the", "suffix": "", "jp": "ところで", "ex_en_pre": "By the", "ex_en_post": ", I saw him yesterday.", "ex_jp": "ところで昨日彼を見たよ。", "note": "話題転換", "badgeType": "badge-grammar", "speech_text": "by the way"},
+        {"id": 295, "unit": 20, "phrase": "call at ~", "prep": "at", "prefix": "call", "suffix": "~", "jp": "(場所を)訪問する", "ex_en_pre": "I called", "ex_en_post": "his house yesterday.", "ex_jp": "私は昨日彼の家を訪問した。", "note": "場所訪問", "badgeType": "badge-grammar", "speech_text": "call at"},
+        {"id": 296, "unit": 20, "phrase": "call on ~", "prep": "on", "prefix": "call", "suffix": "~", "jp": "(人を)訪問する", "ex_en_pre": "I called", "ex_en_post": "him yesterday.", "ex_jp": "私は昨日彼を訪問した。", "note": "人訪問", "badgeType": "badge-grammar", "speech_text": "call on"},
+        {"id": 297, "unit": 20, "phrase": "come and see me", "prep": "see", "prefix": "come and", "suffix": "me", "jp": "私に会いに来る", "ex_en_pre": "My friend came and", "ex_en_post": "me.", "ex_jp": "私の友だちが私に会いに来た。", "note": "訪問・面会", "badgeType": "badge-grammar", "speech_text": "come and see me"},
+        {"id": 298, "unit": 20, "phrase": "come back", "prep": "back", "prefix": "come", "suffix": "", "jp": "もどる・帰る", "ex_en_pre": "He will come", "ex_en_post": "soon.", "ex_jp": "彼はすぐに戻ってくるでしょう。", "note": "帰還", "badgeType": "badge-grammar", "speech_text": "come back"},
+        {"id": 299, "unit": 20, "phrase": "come from ~", "prep": "from", "prefix": "come", "suffix": "~", "jp": "〜出身である", "ex_en_pre": "He comes", "ex_en_post": "England.", "ex_jp": "彼はイギリスの出身である。", "note": "出身地", "badgeType": "badge-synonym", "speech_text": "come from"},
+        {"id": 300, "unit": 20, "phrase": "come home", "prep": "home", "prefix": "come", "suffix": "", "jp": "帰宅する", "ex_en_pre": "When will you come", "ex_en_post": "?", "ex_jp": "いつ帰宅しますか。", "note": "帰宅動作(to不要)", "badgeType": "badge-caution", "speech_text": "come home"}
+    ];
+
+    const unitTitles = {
+        1: "UNIT 1 : be動詞・助動詞を使う重要熟語 (1〜15)",
+        2: "UNIT 2 : 動詞を中心とした重要熟語 I (16〜30)",
+        3: "UNIT 3 : 動詞を中心とした重要熟語 II (31〜45)",
+        4: "UNIT 4 : 動詞・目的語を伴う表現 (46〜60)",
+        5: "UNIT 5 : 前置詞・時・場所の連結表現 (61〜75)",
+        6: "UNIT 6 : 入試最頻出の定型句・接続表現 (76〜90)",
+        7: "UNIT 7 : 数量・比較・構文表現 I (91〜105)",
+        8: "UNIT 8 : 構文・接続・助動詞表現 (106〜120)",
+        9: "UNIT 9 : 疑問詞 How / 慣用対話表現 (121〜135)",
+        10: "UNIT 10 : 接続詞 that / It構文・前置詞句 (136〜150)",
+        11: "UNIT 11 : 動作動詞句・数量表現 (151〜165)",
+        12: "UNIT 12 : 否定構文・方向・位置の定型句 (166〜180)",
+        13: "UNIT 13 : 構文・副詞句・目的表現 (181〜195)",
+        14: "UNIT 14 : 伝聞・目的語構文・数量表現 (196〜210)",
+        15: "UNIT 15 : 動作句・疑問表現・会話定型表現 (211〜225)",
+        16: "UNIT 16 : 数量・期間・時表現 (226〜240)",
+        17: "UNIT 17 : 方向・場所・比較構文 (241〜255)",
+        18: "UNIT 18 : 状態・動作・時間表現 (256〜270)",
+        19: "UNIT 19 : 感情・原因・受動態表現 (271〜285)",
+        20: "UNIT 20 : 総合総復習・最終仕上げ (286〜300)"
+    };
+
+    let currentUnit = 1;
+    let isJpHiddenGlobal = false;
+    let userInputs = {};
+    let gradedStates = {};
+
+    function renderTable() {
+        const tbody = document.getElementById('idiom-tbody');
+        tbody.innerHTML = '';
+
+        const currentItems = idiomData.filter(item => item.unit === currentUnit);
+        
+        document.getElementById('unit-title').innerText = unitTitles[currentUnit] || `UNIT ${currentUnit}`;
+
+        for (let i = 1; i <= 20; i++) {
+            const btn = document.getElementById(`btn-u${i}`);
+            if (btn) btn.classList.toggle('active', currentUnit === i);
+        }
+
+        currentItems.forEach(item => {
+            const tr = document.createElement('tr');
+            const userVal = userInputs[item.id] || '';
+            const isGraded = gradedStates[item.id] || false;
+
+            let exampleElemHtml = `${item.ex_en_pre} <span class="ex-blank">(   )</span> ${item.ex_en_post}`;
+            if (isGraded) {
+                exampleElemHtml = `${item.ex_en_pre} <span class="ex-revealed">( ${item.prep} )</span> ${item.ex_en_post}`;
+            }
+
+            tr.innerHTML = `
+                <td style="color:#64748b; font-weight:bold;">${item.id}</td>
+                <td>
+                    <button class="audio-btn" title="音声再生" onclick="playAudio('${item.speech_text}')">🔊</button>
+                </td>
+                <td>
+                    <div class="problem-row-mobile">
+                        <strong>${item.prefix}</strong>
+                        <input type="text" 
+                               class="input-answer" 
+                               id="input-${item.id}" 
+                               value="${userVal}" 
+                               placeholder="(   )" 
+                               autocomplete="off"
+                               autocorrect="off"
+                               autocapitalize="off"
+                               spellcheck="false"
+                               onkeydown="if(event.key==='Enter') gradeSingle(${item.id})"
+                               oninput="userInputs[${item.id}] = this.value">
+                        <strong>${item.suffix}</strong>
+                        <button class="btn-single-check" onclick="gradeSingle(${item.id})">判定</button>
+                        <span id="badge-${item.id}" class="status-badge"></span>
+                    </div>
+                    <span id="ans-text-${item.id}" class="correct-answer-text"></span>
+                    <span class="badge-note ${item.badgeType}">${item.note}</span>
+                </td>
+                <td>
+                    <span class="jp-text ${isJpHiddenGlobal ? 'hidden' : ''}" onclick="this.classList.toggle('hidden')">${item.jp}</span>
+                </td>
+                <td>
+                    <div id="ex-container-${item.id}" style="font-size:14px; color:#1e293b;">${exampleElemHtml}</div>
+                    <div style="font-size:12px; color:#64748b;">${item.ex_jp}</div>
+                </td>
+                <td>
+                    <span id="result-status-${item.id}" style="font-weight:bold; font-size:13px; color:#64748b;">未解答</span>
+                </td>
+            `;
+            tbody.appendChild(tr);
+
+            if (isGraded) {
+                gradeSingle(item.id, false);
+            }
+        });
+
+        updateScoreDisplay();
+    }
+
+    function gradeSingle(id, updateData = true) {
+        const item = idiomData.find(d => d.id === id);
+        const inputElem = document.getElementById(`input-${id}`);
+        const badgeElem = document.getElementById(`badge-${id}`);
+        const ansElem = document.getElementById(`ans-text-${id}`);
+        const statusElem = document.getElementById(`result-status-${id}`);
+        const exContainer = document.getElementById(`ex-container-${id}`);
+
+        if (!inputElem) return;
+
+        const typed = inputElem.value.trim().toLowerCase();
+        const correct = item.prep.trim().toLowerCase();
+
+        if (typed === "") {
+            inputElem.className = "input-answer";
+            badgeElem.innerText = "";
+            ansElem.innerText = "";
+            statusElem.innerText = "未解答";
+            statusElem.style.color = "#64748b";
+            if (exContainer) {
+                exContainer.innerHTML = `${item.ex_en_pre} <span class="ex-blank">(   )</span> ${item.ex_en_post}`;
+            }
+            if (updateData) delete gradedStates[id];
+            return;
+        }
+
+        if (updateData) gradedStates[id] = true;
+
+        if (exContainer) {
+            exContainer.innerHTML = `${item.ex_en_pre} <span class="ex-revealed">( ${item.prep} )</span> ${item.ex_en_post}`;
+        }
+
+        if (typed === correct) {
+            inputElem.className = "input-answer correct";
+            badgeElem.innerText = "⭕️";
+            badgeElem.className = "status-badge ok";
+            ansElem.innerText = "";
+            statusElem.innerText = "正解 ⭕️";
+            statusElem.style.color = "#15803d";
+        } else {
+            inputElem.className = "input-answer wrong";
+            badgeElem.innerText = "❌";
+            badgeElem.className = "status-badge ng";
+            ansElem.innerText = `正解: ${item.prep}`;
+            statusElem.innerText = "不正解 ❌";
+            statusElem.style.color = "#b91c1c";
+        }
+
+        updateScoreDisplay();
+    }
+
+    function gradeAllAnswers() {
+        const currentItems = idiomData.filter(item => item.unit === currentUnit);
+        currentItems.forEach(item => gradeSingle(item.id));
+    }
+
+    function switchUnit(unitNum) {
+        currentUnit = unitNum;
+        renderTable();
+    }
+
+    function toggleAllJapanese() {
+        isJpHiddenGlobal = !isJpHiddenGlobal;
+        renderTable();
+    }
+
+    function resetAllInputs() {
+        const currentItems = idiomData.filter(item => item.unit === currentUnit);
+        currentItems.forEach(item => {
+            delete userInputs[item.id];
+            delete gradedStates[item.id];
+        });
+        renderTable();
+    }
+
+    function updateScoreDisplay() {
+        const currentItems = idiomData.filter(item => item.unit === currentUnit);
+        let correctCount = 0;
+
+        currentItems.forEach(item => {
+            const inputElem = document.getElementById(`input-${item.id}`);
+            if (inputElem) {
+                const typed = inputElem.value.trim().toLowerCase();
+                const correct = item.prep.trim().toLowerCase();
+                if (typed === correct && typed !== "") {
+                    correctCount++;
+                }
+            }
+        });
+
+        document.getElementById('score-display').innerText = `スコア: ${correctCount} / ${currentItems.length}`;
+    }
+
+    function playAudio(text) {
+        if ('speechSynthesis' in window) {
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'en-US';
+            utterance.rate = 0.85;
+            window.speechSynthesis.speak(utterance);
+        } else {
+            alert('お使いのブラウザは音声読み上げに対応していません。');
+        }
+    }
+
+    renderTable();
+</script>
+
+</body>
+</html>
