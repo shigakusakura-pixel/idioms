@@ -43,7 +43,7 @@
             overflow: hidden;
         }
 
-        /* Header Banner */
+        /* System Header Banner */
         .system-header {
             background: linear-gradient(135deg, #10b981 0%, #059669 100%);
             color: white;
@@ -116,7 +116,6 @@
             justify-content: space-between;
         }
 
-        /* ユニット切替ボタンの横幅完全統一デザイン */
         .unit-selector {
             display: flex;
             gap: 5px;
@@ -203,7 +202,7 @@
             font-weight: bold;
         }
 
-        /* Problem Table */
+        /* Problem Table (PC表示) */
         .idiom-table {
             width: 100%;
             border-collapse: collapse;
@@ -302,10 +301,18 @@
         .audio-btn {
             background: none;
             border: none;
-            font-size: 20px;
+            font-size: 18px;
             cursor: pointer;
             color: var(--primary-color);
-            padding: 4px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            gap: 2px;
+        }
+
+        .audio-btn:active {
+            transform: scale(1.1);
         }
 
         .badge-note {
@@ -313,7 +320,6 @@
             padding: 2px 7px;
             border-radius: 4px;
             display: inline-block;
-            margin-left: 6px;
             font-weight: 600;
         }
 
@@ -323,7 +329,7 @@
 
         .jp-text {
             cursor: pointer;
-            padding: 4px 8px;
+            padding: 3px 8px;
             border-radius: 4px;
             transition: all 0.15s;
             display: inline-block;
@@ -343,8 +349,8 @@
         }
 
         .btn-single-check {
-            padding: 6px 12px;
-            font-size: 13px;
+            padding: 5px 12px;
+            font-size: 12px;
             border-radius: 6px;
             border: 1px solid #94a3b8;
             background: #f8fafc;
@@ -353,9 +359,9 @@
             color: #334155;
         }
 
-        /* スマホ表示用レスポンシブCSS */
+        /* 📱 スマホ表示の「スタイリッシュ型」レスポンシブデザイン */
         @media (max-width: 768px) {
-            body { padding: 5px; }
+            body { padding: 4px; }
             .system-title { font-size: 15px; }
             .school-name { font-size: 11px; }
 
@@ -366,30 +372,51 @@
                 width: 100%;
             }
 
+            /* 1問を洗練された1つのカード型に整理 */
             .idiom-table tr {
                 background: #ffffff;
-                border: 1px solid #cbd5e1;
-                border-radius: 8px;
-                margin-bottom: 12px;
-                padding: 12px;
-                box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+                border: 1px solid #e2e8f0;
+                border-radius: 10px;
+                margin-bottom: 10px;
+                padding: 10px 12px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.04);
             }
 
             .idiom-table td {
-                padding: 4px 0;
+                padding: 3px 0;
                 border-bottom: none;
             }
 
+            /* カード内の上部ヘッダー（番号 & 音声）を横並びに固定 */
+            .card-header-mobile {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 6px;
+                padding-bottom: 4px;
+                border-bottom: 1px dashed #f1f5f9;
+            }
+
+            .item-number-tag {
+                font-size: 13px;
+                font-weight: bold;
+                color: #059669;
+                background: #e6f4ea;
+                padding: 2px 8px;
+                border-radius: 12px;
+            }
+
+            /* 問題・入力フォームをコンパクトに1行化 */
             .problem-row-mobile {
                 display: flex;
                 align-items: center;
-                gap: 8px;
+                gap: 6px;
                 flex-wrap: wrap;
                 margin-bottom: 6px;
             }
 
             .input-answer {
-                width: 110px;
+                width: 100px;
                 font-size: 16px;
             }
 
@@ -399,7 +426,7 @@
             }
 
             .btn-unit {
-                width: 60px;
+                width: 58px;
                 font-size: 11px;
             }
         }
@@ -426,7 +453,7 @@
         <span class="school-name">志学ゼミナール</span>
     </div>
 
-    <!-- Navigation Tabs (GitHub Pagesの各リポジトリURLへ連動) -->
+    <!-- Navigation Tabs -->
     <div class="nav-tabs">
         <button class="tab-btn" onclick="location.href='https://shigakusakura-pixel.github.io/mystudyroom/'">マイスタディ</button>
         <button class="tab-btn" onclick="location.href='https://shigakusakura-pixel.github.io/tango/'">中学英単語</button>
@@ -666,7 +693,6 @@
         {"id": 166, "unit": 12, "phrase": "want A to ~", "prep": "to", "prefix": "want you", "suffix": "come with me", "jp": "Aに〜してもらいたい", "ex_en_pre": "I want you", "ex_en_post": "come with me.", "ex_jp": "私と一緒にあなたに来てもらいたい。", "note": "want ＋ 人 ＋ to V", "badgeType": "badge-grammar", "speech_text": "want someone to"},
         {"id": 167, "unit": 12, "phrase": "tell A to ~", "prep": "to", "prefix": "tell me", "suffix": "open the door", "jp": "Aに〜するように言う", "ex_en_pre": "He told me", "ex_en_post": "open the door.", "ex_jp": "彼は戸を開けるように私に言った。", "note": "tell ＋ 人 ＋ to V", "badgeType": "badge-grammar", "speech_text": "tell someone to"},
         {"id": 168, "unit": 12, "phrase": "That's right", "prep": "right", "prefix": "That's", "suffix": "", "jp": "そのとおりです", "ex_en_pre": "We must help him. That's", "ex_en_post": ".", "ex_jp": "彼を助けねばならない。その通りだ。", "note": "同意の返答", "badgeType": "badge-grammar", "speech_text": "That is right"},
-        {"id": 169, "unit": 12, "phrase": "That's too bad", "prep": "bad", "prefix": "That's too", "suffix": "", "jp": "それはいけませんね・気の毒に", "ex_en_pre": "I feel sick. That's too", "ex_en_post": ".", "ex_jp": "私は気分が悪い。それはお気の毒です。", "note": "同情の返答", "badgeType": "badge-grammar", "speech_text": "That is too bad"},
         {"id": 170, "unit": 12, "phrase": "They say that ~", "prep": "say", "prefix": "They", "suffix": "he is going abroad.", "jp": "〜だそうです・噂されている", "ex_en_pre": "They", "ex_en_post": "he is going abroad.", "ex_jp": "彼は外国へ行くそうです。", "note": "伝聞表現", "badgeType": "badge-grammar", "speech_text": "They say that"},
         {"id": 171, "unit": 12, "phrase": "too ... to ~", "prep": "to", "prefix": "too difficult", "suffix": "read", "jp": "非常に...なので〜できない", "ex_en_pre": "This book is too difficult", "ex_en_post": "read.", "ex_jp": "この本は読むには難しすぎる。", "note": "so ... that cannot", "badgeType": "badge-caution", "speech_text": "too difficult to read"},
         {"id": 172, "unit": 12, "phrase": "What do you mean ?", "prep": "mean", "prefix": "What do you", "suffix": "?", "jp": "どういう意味ですか", "ex_en_pre": "What do you", "ex_en_post": "by that?", "ex_jp": "それはどういう意味ですか。", "note": "意図の確認", "badgeType": "badge-grammar", "speech_text": "What do you mean"},
@@ -858,11 +884,15 @@
             }
 
             tr.innerHTML = `
-                <td style="color:#64748b; font-weight:bold;">${item.id}</td>
+                <td style="display:none;">${item.id}</td>
+                <td style="display:none;"></td>
                 <td>
-                    <button class="audio-btn" title="音声再生" onclick="playAudio('${item.speech_text}')">🔊</button>
-                </td>
-                <td>
+                    <!-- スマホ向けスマートカードヘッダー (#番号 & 音声ボタン) -->
+                    <div class="card-header-mobile">
+                        <span class="item-number-tag">#${item.id}</span>
+                        <button class="audio-btn" title="音声再生" onclick="playAudio('${item.speech_text}')">🔊 発音</button>
+                    </div>
+
                     <div class="problem-row-mobile">
                         <strong>${item.prefix}</strong>
                         <input type="text" 
