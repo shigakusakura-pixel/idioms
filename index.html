@@ -993,9 +993,25 @@
         updateScoreDisplay();
     }
 
-    function gradeAllAnswers() {
+  function gradeAllAnswers() {
         const currentItems = idiomData.filter(item => item.unit === currentUnit);
         currentItems.forEach(item => gradeSingle(item.id));
+
+        // ★ ここから送信処理を追加
+        if (window.sendResultToFirebase) {
+            let correctCount = 0;
+            currentItems.forEach(item => {
+                const inputElem = document.getElementById(`input-${item.id}`);
+                if (inputElem) {
+                    const typed = inputElem.value.trim().toLowerCase();
+                    const correct = item.prep.trim().toLowerCase();
+                    if (typed === correct && typed !== "") {
+                        correctCount++;
+                    }
+                }
+            });
+            window.sendResultToFirebase("中学英熟語", `Unit ${currentUnit}`, correctCount, currentItems.length);
+        }
     }
 
     function switchUnit(unitNum) {
@@ -1050,5 +1066,6 @@
     renderTable();
 </script>
 
+<script type="module" src="./mystudy.js"></script>
 </body>
 </html>
