@@ -942,7 +942,7 @@
         updateScoreDisplay();
     }
 
-    function gradeSingle(id, updateData = true) {
+   function gradeSingle(id, updateData = true) {
         const item = idiomData.find(d => d.id === id);
         const inputElem = document.getElementById(`input-${id}`);
         const badgeElem = document.getElementById(`badge-${id}`);
@@ -993,26 +993,33 @@
         updateScoreDisplay();
     }
 
-  function gradeAllAnswers() {
+    // ★ 一括採点ボタン処理（全問採点 ＋ Firebase送信 ＋ 完了通知）
+    window.gradeAllAnswers = function() {
         const currentItems = idiomData.filter(item => item.unit === currentUnit);
-        currentItems.forEach(item => gradeSingle(item.id));
+        
+        // 全問題を一括で採点表示
+        currentItems.forEach(item => gradeSingle(item.id, true));
 
-        // ★ ここから送信処理を追加
-        if (window.sendResultToFirebase) {
-            let correctCount = 0;
-            currentItems.forEach(item => {
-                const inputElem = document.getElementById(`input-${item.id}`);
-                if (inputElem) {
-                    const typed = inputElem.value.trim().toLowerCase();
-                    const correct = item.prep.trim().toLowerCase();
-                    if (typed === correct && typed !== "") {
-                        correctCount++;
-                    }
+        // 正解数を集計
+        let correctCount = 0;
+        currentItems.forEach(item => {
+            const inputElem = document.getElementById(`input-${item.id}`);
+            if (inputElem) {
+                const typed = inputElem.value.trim().toLowerCase();
+                const correct = item.prep.trim().toLowerCase();
+                if (typed === correct && typed !== "") {
+                    correctCount++;
                 }
-            });
-            window.sendResultToFirebase("中学英熟語", `Unit ${currentUnit}`, correctCount, currentItems.length);
+            }
+        });
+
+        // Firebaseに一括送信
+        if (window.sendResultToFirebase) {
+            window.sendResultToFirebase("中学英語", `UNIT ${currentUnit}`, correctCount, currentItems.length);
         }
-    }
+
+        alert(`採点が完了しました！\nスコア: ${correctCount} / ${currentItems.length}\n結果を学習カルテに記録しました。`);
+    };
 
     function switchUnit(unitNum) {
         currentUnit = unitNum;
