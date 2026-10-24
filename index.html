@@ -1078,6 +1078,7 @@ renderTable();
 <!-- ★ 入試英熟語専用：直接Firebase送信＆Safari完全対応モジュール -->
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+  import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
   import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
   const firebaseConfig = {
@@ -1090,53 +1091,37 @@ renderTable();
   };
 
   const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
   const db = getFirestore(app);
+  const PORTAL_URL = "https://shigakusakura-pixel.github.io/mystudyroom/";
 
   // タイマー計測
   let idiomStartTime = Date.now();
 
-  // 生徒IDの安全な取得（Safari対応＆追い出し防止）
-  function getSafeStudentId() {
-    const params = new URLSearchParams(window.location.search);
-    let s = params.get('student') || params.get('id') || params.get('studentId');
-
-    if (!s && window.location.hash) {
-      const hashText = window.location.hash.replace(/^#/, '');
-      const hashParams = new URLSearchParams(hashText.includes('=') ? hashText : 'student=' + hashText);
-      s = hashParams.get('student') || hashParams.get('id');
-    }
-
-    if (!s || s === 'guest' || s === 'ゲスト') {
-      try {
-        s = localStorage.getItem('shigaku_student_id');
-      } catch(e){}
-    }
-
-    // 初回のみ名前・IDを尋ねて記憶（追い出さない）
-    if (!s || s === 'guest' || s === 'ゲスト') {
-      s = prompt("【学習記録】お名前（または生徒ID）を入力してください：");
-      if (s && s.trim() !== "") {
-        s = s.trim();
-        try {
-          localStorage.setItem('shigaku_student_id', s);
-        } catch(e){}
-      } else {
-        s = "guest";
+  const authenticatedUserPromise = new Promise((resolve, reject) => {
+    let unsubscribe = () => {};
+    unsubscribe = onAuthStateChanged(auth, (user) => {
+      unsubscribe();
+      if (user && user.email) {
+        resolve(user);
+        return;
       }
-    }
-
-    s = s.trim();
-    return s.includes('@') ? s : `${s}@shigaku.local`;
-  }
+      alert("ログインが必要です。ポータルへ戻ります。");
+      window.location.replace(PORTAL_URL);
+      reject(new Error("Firebase Authenticationのログイン情報がありません。"));
+    }, reject);
+  });
 
   // 採点時に実行される送信関数
   window.sendResultToFirebase = async function(subjectName, unitName, correctScore, totalScore) {
-    const finalId = getSafeStudentId();
     const durationSec = Math.max(1, Math.floor((Date.now() - idiomStartTime) / 1000));
     idiomStartTime = Date.now(); // タイマーリセット
 
     try {
+      const user = await authenticatedUserPromise;
+      const finalId = user.email.trim().toLowerCase();
       await addDoc(collection(db, "learning_records"), {
+        uid: user.uid,
         studentId: finalId,
         subject: subjectName || "中学英語",
         unit: `入試英熟語 ${unitName}`,
